@@ -1,0 +1,8 @@
+_let altTueThur = _fun (altTueThur)
+                    _fun (n)
+                     _if n == 0
+                     _then 2
+                     _else _if n == 1
+                     _then 4
+                     _else altTueThur(altTueThur)(n + -2)
+_in _fun(n) altTueThur(altTueThur)(n)
