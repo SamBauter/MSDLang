@@ -26,7 +26,7 @@
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">MSDScript
-   &#160;<span id="projectnumber">1.0</span>
+   &#160;<span id="projectnumber">1.1</span>
    </div>
    <div id="projectbrief">A simple scripting language for evaluating expressions</div>
   </td>
@@ -92,7 +92,7 @@ $(document).ready(function(){initNavTree('class_if_expr.html',''); initResizable
 </div><!--header-->
 <div class="contents">
 
-<p>An <a class="el" href="class_expr.html" title="An Abstract Class representing all the methods each subclass of Expr must implement.">Expr</a> that represents a conditional if-else statement.  
+<p>An <a class="el" href="class_expr.html" title="An Abstract Class representing all the methods each subclass of Expr must implement.">Expr</a> that represents a conditional statement of the form _if condition _then trueConsequence_else falseConsequence Ex.  
  <a href="class_if_expr.html#details">More...</a></p>
 
 <p><code>#include &lt;<a class="el" href="_expr_8h_source.html">Expr.h</a>&gt;</code></p>
@@ -117,10 +117,10 @@ Public Member Functions</h2></td></tr>
 std::shared_ptr&lt; <a class="el" href="class_expr.html">Expr</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_if_expr.html#a86cc6e10457486346b503bbe1962a098">subst</a> (std::string var, std::shared_ptr&lt; <a class="el" href="class_val.html">Val</a> &gt; newVal) override</td></tr>
 <tr class="memdesc:a86cc6e10457486346b503bbe1962a098"><td class="mdescLeft">&#160;</td><td class="mdescRight">Searches an <a class="el" href="class_expr.html" title="An Abstract Class representing all the methods each subclass of Expr must implement.">Expr</a> for an unbound variable: varName, and replaces that variable with new_val. <br /></td></tr>
 <tr class="separator:a86cc6e10457486346b503bbe1962a098"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a9f2e45f694da22488e93fddf6b2b472a"><td class="memItemLeft" align="right" valign="top"><a id="a9f2e45f694da22488e93fddf6b2b472a"></a>
-std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_if_expr.html#a9f2e45f694da22488e93fddf6b2b472a">exprToString</a> () override</td></tr>
-<tr class="memdesc:a9f2e45f694da22488e93fddf6b2b472a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Converts an <a class="el" href="class_expr.html" title="An Abstract Class representing all the methods each subclass of Expr must implement.">Expr</a> to its mathematical string representation, may add parentheses to preserve order of operations. <br /></td></tr>
-<tr class="separator:a9f2e45f694da22488e93fddf6b2b472a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a906a83d4b478fecb10f610f6f4f888b0"><td class="memItemLeft" align="right" valign="top"><a id="a906a83d4b478fecb10f610f6f4f888b0"></a>
+std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_if_expr.html#a906a83d4b478fecb10f610f6f4f888b0">to_string</a> () override</td></tr>
+<tr class="memdesc:a906a83d4b478fecb10f610f6f4f888b0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Converts an <a class="el" href="class_expr.html" title="An Abstract Class representing all the methods each subclass of Expr must implement.">Expr</a> to its mathematical string representation, may add parentheses to preserve order of operations. <br /></td></tr>
+<tr class="separator:a906a83d4b478fecb10f610f6f4f888b0"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aaa5fe1d848b52dd9459132c2a08db83a"><td class="memItemLeft" align="right" valign="top"><a id="aaa5fe1d848b52dd9459132c2a08db83a"></a>
 std::shared_ptr&lt; <a class="el" href="class_expr.html">Expr</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_if_expr.html#aaa5fe1d848b52dd9459132c2a08db83a">optimize</a> () override</td></tr>
 <tr class="memdesc:aaa5fe1d848b52dd9459132c2a08db83a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Simplifies an <a class="el" href="class_expr.html" title="An Abstract Class representing all the methods each subclass of Expr must implement.">Expr</a> if possible. <br /></td></tr>
@@ -146,8 +146,8 @@ std::shared_ptr&lt; <a class="el" href="class_expr.html">Expr</a> &gt;&#160;</td
 <tr class="separator:a89c1df88f1ea85d11b2c607c41bc79d3"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><p>An <a class="el" href="class_expr.html" title="An Abstract Class representing all the methods each subclass of Expr must implement.">Expr</a> that represents a conditional if-else statement. </p>
-<p>Ex. _if _true _then 1 _else 2. </p>
+<div class="textblock"><p>An <a class="el" href="class_expr.html" title="An Abstract Class representing all the methods each subclass of Expr must implement.">Expr</a> that represents a conditional statement of the form _if condition _then trueConsequence_else falseConsequence Ex. </p>
+<p>_if 1==1 _then 5 _else 0 </p>
 </div><h2 class="groupheader">Member Function Documentation</h2>
 <a id="a1ca0b6929d2344e1a803b7570e76890d"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a1ca0b6929d2344e1a803b7570e76890d">&#9670;&nbsp;</a></span>equals()</h2>

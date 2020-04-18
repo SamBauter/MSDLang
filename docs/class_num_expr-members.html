@@ -26,7 +26,7 @@
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">MSDScript
-   &#160;<span id="projectnumber">1.0</span>
+   &#160;<span id="projectnumber">1.1</span>
    </div>
    <div id="projectbrief">A simple scripting language for evaluating expressions</div>
   </td>
@@ -90,15 +90,17 @@ $(document).ready(function(){initNavTree('class_num_expr.html',''); initResizabl
 
 <p>This is the complete list of members for <a class="el" href="class_num_expr.html">NumExpr</a>, including all inherited members.</p>
 <table class="directory">
-  <tr class="even"><td class="entry"><a class="el" href="class_num_expr.html#ad0514edf66b0187936974dbce1d79d8b">containsVar</a>() override</td><td class="entry"><a class="el" href="class_num_expr.html">NumExpr</a></td><td class="entry"><span class="mlabel">virtual</span></td></tr>
-  <tr><td class="entry"><a class="el" href="class_num_expr.html#aeefec1ec7f5ea7a1a1a606c7bee1ad20">equals</a>(std::shared_ptr&lt; Expr &gt; other_expr) override</td><td class="entry"><a class="el" href="class_num_expr.html">NumExpr</a></td><td class="entry"><span class="mlabel">virtual</span></td></tr>
-  <tr class="even"><td class="entry"><a class="el" href="class_num_expr.html#ae33006d7e3bee480a98f0a88eb304a8f">exprToString</a>() override</td><td class="entry"><a class="el" href="class_num_expr.html">NumExpr</a></td><td class="entry"><span class="mlabel">virtual</span></td></tr>
-  <tr><td class="entry"><a class="el" href="class_num_expr.html#ac0b045ea6dabda8780084e820e05556a">interp</a>(std::shared_ptr&lt; Env &gt; env) override</td><td class="entry"><a class="el" href="class_num_expr.html">NumExpr</a></td><td class="entry"><span class="mlabel">virtual</span></td></tr>
-  <tr bgcolor="#f0f0f0" class="even"><td class="entry"><b>NumExpr</b>(int rep) (defined in <a class="el" href="class_num_expr.html">NumExpr</a>)</td><td class="entry"><a class="el" href="class_num_expr.html">NumExpr</a></td><td class="entry"><span class="mlabel">explicit</span></td></tr>
-  <tr><td class="entry"><a class="el" href="class_num_expr.html#ad1bca025ab828bad606ca23e55355790">optimize</a>() override</td><td class="entry"><a class="el" href="class_num_expr.html">NumExpr</a></td><td class="entry"><span class="mlabel">virtual</span></td></tr>
-  <tr class="even"><td class="entry"><a class="el" href="class_num_expr.html#a928fe1ffd7cedd357ebb37d6a21adefa">rep</a></td><td class="entry"><a class="el" href="class_num_expr.html">NumExpr</a></td><td class="entry"></td></tr>
-  <tr><td class="entry"><a class="el" href="class_num_expr.html#a1f4b7e10a849935e1260e3ce3730177c">step_interp</a>() override</td><td class="entry"><a class="el" href="class_num_expr.html">NumExpr</a></td><td class="entry"><span class="mlabel">virtual</span></td></tr>
-  <tr class="even"><td class="entry"><a class="el" href="class_num_expr.html#a3d7f6606ee6e89ed3a2940cb7c19ba41">subst</a>(std::string varName, std::shared_ptr&lt; Val &gt; new_val) override</td><td class="entry"><a class="el" href="class_num_expr.html">NumExpr</a></td><td class="entry"><span class="mlabel">virtual</span></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="class_literal_expr.html#aae31edbb282178b8839085820586b90b">containsVar</a>() override</td><td class="entry"><a class="el" href="class_literal_expr.html">LiteralExpr</a></td><td class="entry"><span class="mlabel">virtual</span></td></tr>
+  <tr><td class="entry"><a class="el" href="class_literal_expr.html#a2e0424bf2bc5dc3ba3a3c27b9111213a">equals</a>(std::shared_ptr&lt; Expr &gt; e) override</td><td class="entry"><a class="el" href="class_literal_expr.html">LiteralExpr</a></td><td class="entry"><span class="mlabel">virtual</span></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="class_literal_expr.html#abf939bdf14a18fad9912e516fabd1022">interp</a>(std::shared_ptr&lt; Env &gt; env) override</td><td class="entry"><a class="el" href="class_literal_expr.html">LiteralExpr</a></td><td class="entry"><span class="mlabel">virtual</span></td></tr>
+  <tr bgcolor="#f0f0f0"><td class="entry"><b>LiteralExpr</b>(std::shared_ptr&lt; Val &gt; val) (defined in <a class="el" href="class_literal_expr.html">LiteralExpr</a>)</td><td class="entry"><a class="el" href="class_literal_expr.html">LiteralExpr</a></td><td class="entry"></td></tr>
+  <tr bgcolor="#f0f0f0" class="even"><td class="entry"><b>NumExpr</b>(int rep) (defined in <a class="el" href="class_num_expr.html">NumExpr</a>)</td><td class="entry"><a class="el" href="class_num_expr.html">NumExpr</a></td><td class="entry"></td></tr>
+  <tr><td class="entry"><a class="el" href="class_literal_expr.html#ad499dee3eb20448ec794a5a196af47c4">optimize</a>() override</td><td class="entry"><a class="el" href="class_literal_expr.html">LiteralExpr</a></td><td class="entry"><span class="mlabel">virtual</span></td></tr>
+  <tr bgcolor="#f0f0f0" class="even"><td class="entry"><b>rep</b> (defined in <a class="el" href="class_num_expr.html">NumExpr</a>)</td><td class="entry"><a class="el" href="class_num_expr.html">NumExpr</a></td><td class="entry"></td></tr>
+  <tr><td class="entry"><a class="el" href="class_literal_expr.html#a2b38d20a5b36fca52c9eee19d190ed02">step_interp</a>() override</td><td class="entry"><a class="el" href="class_literal_expr.html">LiteralExpr</a></td><td class="entry"><span class="mlabel">virtual</span></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="class_literal_expr.html#ac41634f279bf47e61f19856635db2fb2">subst</a>(std::string varName, std::shared_ptr&lt; Val &gt; new_val) override</td><td class="entry"><a class="el" href="class_literal_expr.html">LiteralExpr</a></td><td class="entry"><span class="mlabel">virtual</span></td></tr>
+  <tr><td class="entry"><a class="el" href="class_literal_expr.html#a0ddeb8b7b669d11129c87cc3b8ae9fbe">to_string</a>() override</td><td class="entry"><a class="el" href="class_literal_expr.html">LiteralExpr</a></td><td class="entry"><span class="mlabel">virtual</span></td></tr>
+  <tr bgcolor="#f0f0f0" class="even"><td class="entry"><b>val</b> (defined in <a class="el" href="class_num_expr.html">NumExpr</a>)</td><td class="entry"><a class="el" href="class_num_expr.html">NumExpr</a></td><td class="entry"></td></tr>
 </table></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->

@@ -26,7 +26,7 @@
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">MSDScript
-   &#160;<span id="projectnumber">1.0</span>
+   &#160;<span id="projectnumber">1.1</span>
    </div>
    <div id="projectbrief">A simple scripting language for evaluating expressions</div>
   </td>
@@ -93,13 +93,13 @@ $(document).ready(function(){initNavTree('class_let_expr.html',''); initResizabl
   <tr class="even"><td class="entry"><a class="el" href="class_let_expr.html#af622dbf27cc05708813155ab9c15f2a4">body</a></td><td class="entry"><a class="el" href="class_let_expr.html">LetExpr</a></td><td class="entry"></td></tr>
   <tr><td class="entry"><a class="el" href="class_let_expr.html#a57be8302e010b7fc923f18f576ca7239">containsVar</a>() override</td><td class="entry"><a class="el" href="class_let_expr.html">LetExpr</a></td><td class="entry"><span class="mlabel">virtual</span></td></tr>
   <tr class="even"><td class="entry"><a class="el" href="class_let_expr.html#a1a654b5c799a51fdc515e169690589ec">equals</a>(std::shared_ptr&lt; Expr &gt; e) override</td><td class="entry"><a class="el" href="class_let_expr.html">LetExpr</a></td><td class="entry"><span class="mlabel">virtual</span></td></tr>
-  <tr><td class="entry"><a class="el" href="class_let_expr.html#a57148397766cadb906aa4fe34cd521ae">exprToString</a>() override</td><td class="entry"><a class="el" href="class_let_expr.html">LetExpr</a></td><td class="entry"><span class="mlabel">virtual</span></td></tr>
-  <tr class="even"><td class="entry"><a class="el" href="class_let_expr.html#a29c1bfd3ec1f234aea5f6b44caf795cf">interp</a>(std::shared_ptr&lt; Env &gt; env) override</td><td class="entry"><a class="el" href="class_let_expr.html">LetExpr</a></td><td class="entry"><span class="mlabel">virtual</span></td></tr>
-  <tr bgcolor="#f0f0f0"><td class="entry"><b>LetExpr</b>(std::string varName, std::shared_ptr&lt; Expr &gt; varVal, std::shared_ptr&lt; Expr &gt; bodyToSubst) (defined in <a class="el" href="class_let_expr.html">LetExpr</a>)</td><td class="entry"><a class="el" href="class_let_expr.html">LetExpr</a></td><td class="entry"></td></tr>
-  <tr class="even"><td class="entry"><a class="el" href="class_let_expr.html#a142f973ee41b17351fc3aa6a649c27e3">optimize</a>() override</td><td class="entry"><a class="el" href="class_let_expr.html">LetExpr</a></td><td class="entry"><span class="mlabel">virtual</span></td></tr>
-  <tr><td class="entry"><a class="el" href="class_let_expr.html#aa3d0dd7594661fda64ee295dda943199">rhs</a></td><td class="entry"><a class="el" href="class_let_expr.html">LetExpr</a></td><td class="entry"></td></tr>
-  <tr class="even"><td class="entry"><a class="el" href="class_let_expr.html#a5cbea78090c0d44a18596d3ab7f3cd2e">step_interp</a>() override</td><td class="entry"><a class="el" href="class_let_expr.html">LetExpr</a></td><td class="entry"><span class="mlabel">virtual</span></td></tr>
-  <tr><td class="entry"><a class="el" href="class_let_expr.html#a40893e30cb8916dd44fedf7f9497d2aa">subst</a>(std::string varName, std::shared_ptr&lt; Val &gt; new_val) override</td><td class="entry"><a class="el" href="class_let_expr.html">LetExpr</a></td><td class="entry"><span class="mlabel">virtual</span></td></tr>
+  <tr><td class="entry"><a class="el" href="class_let_expr.html#a29c1bfd3ec1f234aea5f6b44caf795cf">interp</a>(std::shared_ptr&lt; Env &gt; env) override</td><td class="entry"><a class="el" href="class_let_expr.html">LetExpr</a></td><td class="entry"><span class="mlabel">virtual</span></td></tr>
+  <tr bgcolor="#f0f0f0" class="even"><td class="entry"><b>LetExpr</b>(std::string varName, std::shared_ptr&lt; Expr &gt; varVal, std::shared_ptr&lt; Expr &gt; bodyToSubst) (defined in <a class="el" href="class_let_expr.html">LetExpr</a>)</td><td class="entry"><a class="el" href="class_let_expr.html">LetExpr</a></td><td class="entry"></td></tr>
+  <tr><td class="entry"><a class="el" href="class_let_expr.html#a142f973ee41b17351fc3aa6a649c27e3">optimize</a>() override</td><td class="entry"><a class="el" href="class_let_expr.html">LetExpr</a></td><td class="entry"><span class="mlabel">virtual</span></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="class_let_expr.html#aa3d0dd7594661fda64ee295dda943199">rhs</a></td><td class="entry"><a class="el" href="class_let_expr.html">LetExpr</a></td><td class="entry"></td></tr>
+  <tr><td class="entry"><a class="el" href="class_let_expr.html#a5cbea78090c0d44a18596d3ab7f3cd2e">step_interp</a>() override</td><td class="entry"><a class="el" href="class_let_expr.html">LetExpr</a></td><td class="entry"><span class="mlabel">virtual</span></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="class_let_expr.html#a40893e30cb8916dd44fedf7f9497d2aa">subst</a>(std::string varName, std::shared_ptr&lt; Val &gt; new_val) override</td><td class="entry"><a class="el" href="class_let_expr.html">LetExpr</a></td><td class="entry"><span class="mlabel">virtual</span></td></tr>
+  <tr><td class="entry"><a class="el" href="class_let_expr.html#a8e4f33ad9351dc79a19ac42303545ec8">to_string</a>() override</td><td class="entry"><a class="el" href="class_let_expr.html">LetExpr</a></td><td class="entry"><span class="mlabel">virtual</span></td></tr>
   <tr class="even"><td class="entry"><a class="el" href="class_let_expr.html#aacbda02ef6d838df45092f09659fa2d5">varName</a></td><td class="entry"><a class="el" href="class_let_expr.html">LetExpr</a></td><td class="entry"></td></tr>
 </table></div><!-- contents -->
 </div><!-- doc-content -->

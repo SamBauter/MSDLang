@@ -26,7 +26,7 @@
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">MSDScript
-   &#160;<span id="projectnumber">1.0</span>
+   &#160;<span id="projectnumber">1.1</span>
    </div>
    <div id="projectbrief">A simple scripting language for evaluating expressions</div>
   </td>
@@ -90,12 +90,16 @@ $(document).ready(function(){initNavTree('gettingstarted.html',''); initResizabl
 <div class="textblock"><h1><a class="anchor" id="autotoc_md0"></a>
 Downloading and Building the Executable</h1>
 <ol type="1">
-<li>Clone the whole repository from <a href="https://github.com/UtahMSD/SamBauter/tree/master/CS6015/MSD%20Lang%20Pack">The MSD Lang Package Page</a></li>
-<li>If you don't already have cmake installed then run <code>brew install cmake</code></li>
-<li>In the command line navigate to the directory.</li>
-<li>Run <code>cmake ./</code></li>
+<li>You will need to download all of the files contained in the github folder found <a href="http://github.com/SamBauter/MSDLang/tree/master/Source%20Code">here</a></li>
+<li>If you don't already have cmake installed then you will need to download it. Instructions for installing on various platforms can be found <a href="https://cmake.org/download/">here</a> <br  />
+</li>
+<li>In your terminal application navigate to the folder containing the files dowloaded from the github folder.</li>
 <li>Run <code>make</code></li>
-<li>This should generate an Executable File: MSDLangExec.</li>
+<li>This should generate an two files: <br  />
+ <b>File 1</b>: msdscript: an executable file for running msdscript in the command line. <br  />
+ <b>File 2</b>: libmsdscript.a: a library file enabling the User to link the classes, functions, and methods of MSDLang to produce their own executable. <br  />
+ <b>Note</b>: Using these files is discussed in the: <a class="el" href="userguide.html">User guide</a>. <br  />
+</li>
 <li>Please proceed to the <a class="el" href="grammarguide.html">Grammar Guide</a> to learn about the grammar supported by MSDScript. </li>
 </ol>
 </div></div><!-- contents -->

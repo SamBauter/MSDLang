@@ -33,21 +33,26 @@ var NAVTREE =
         [ "Number Expressions", "grammarguide.html#autotoc_md3", null ],
         [ "Boolean Expressions", "grammarguide.html#autotoc_md4", null ],
         [ "Variable Expressions", "grammarguide.html#autotoc_md5", null ],
-        [ "Addition Expressions", "grammarguide.html#autotoc_md6", null ],
-        [ "Multiplication Expressions", "grammarguide.html#autotoc_md7", null ],
-        [ "Comparison Expressions", "grammarguide.html#autotoc_md8", null ],
-        [ "Conditional Expressions", "grammarguide.html#autotoc_md9", null ],
-        [ "Let Expressions", "grammarguide.html#autotoc_md10", null ],
-        [ "Function Expressions", "grammarguide.html#autotoc_md11", null ],
-        [ "Call Expressions", "grammarguide.html#autotoc_md12", null ],
-        [ "Recursive Calls", "grammarguide.html#autotoc_md13", null ]
+        [ "BinaryOp Expressions", "grammarguide.html#autotoc_md6", null ],
+        [ "Addition Expressions", "grammarguide.html#autotoc_md7", null ],
+        [ "Multiplication Expressions", "grammarguide.html#autotoc_md8", null ],
+        [ "Equal to Expressions", "grammarguide.html#autotoc_md9", null ],
+        [ "Conditional Expressions", "grammarguide.html#autotoc_md10", null ],
+        [ "Let Expressions", "grammarguide.html#autotoc_md11", null ],
+        [ "Function Expressions", "grammarguide.html#autotoc_md12", null ],
+        [ "Call Expressions", "grammarguide.html#autotoc_md13", null ],
+        [ "Recursive Calls", "grammarguide.html#autotoc_md14", null ]
       ] ]
     ] ],
+    [ "Library guide", "libraryguide.html", [
+      [ "Using MSDLang as a Library", "libraryguide.html#autotoc_md15", null ]
+    ] ],
     [ "User guide", "userguide.html", [
-      [ "Running From the Command Line", "userguide.html#autotoc_md14", null ],
-      [ "Interpreting an Expression From a Text File", "userguide.html#autotoc_md15", null ],
-      [ "Optimizing an Expression", "userguide.html#autotoc_md16", null ],
-      [ "Interpreting Expression with a large amount of recursion", "userguide.html#autotoc_md17", null ]
+      [ "Running From the Command Line", "userguide.html#autotoc_md16", null ],
+      [ "Interpreting an Expression From a Text File", "userguide.html#autotoc_md17", null ],
+      [ "Optimizing an Expression", "userguide.html#autotoc_md18", null ],
+      [ "Interpreting Expression with a large amount of recursion", "userguide.html#autotoc_md19", null ],
+      [ "Running Tests", "userguide.html#autotoc_md20", null ]
     ] ],
     [ "Classes", "annotated.html", [
       [ "Class List", "annotated.html", "annotated_dup" ],
@@ -67,7 +72,7 @@ var NAVTREE =
 var NAVTREEINDEX =
 [
 "_cont_8hpp_source.html",
-"functions_vars.html"
+"grammarguide.html#autotoc_md13"
 ];
 
 var SYNCONMSG = 'click to disable panel synchronisation';

@@ -26,7 +26,7 @@
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">MSDScript
-   &#160;<span id="projectnumber">1.0</span>
+   &#160;<span id="projectnumber">1.1</span>
    </div>
    <div id="projectbrief">A simple scripting language for evaluating expressions</div>
   </td>
@@ -92,148 +92,65 @@ $(document).ready(function(){initNavTree('class_bool_expr.html',''); initResizab
 </div><!--header-->
 <div class="contents">
 
-<p>An <a class="el" href="class_expr.html" title="An Abstract Class representing all the methods each subclass of Expr must implement.">Expr</a> that represents a boolean.  
+<p>A class that is used to represent number expressions as objects.  
  <a href="class_bool_expr.html#details">More...</a></p>
 
 <p><code>#include &lt;<a class="el" href="_expr_8h_source.html">Expr.h</a>&gt;</code></p>
 
-<p>Inherits <a class="el" href="class_expr.html">Expr</a>.</p>
+<p>Inherits <a class="el" href="class_literal_expr.html">LiteralExpr</a>.</p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
 <tr class="memitem:ab4aa6da7343faa4d39a46117ab8f1c21"><td class="memItemLeft" align="right" valign="top"><a id="ab4aa6da7343faa4d39a46117ab8f1c21"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><b>BoolExpr</b> (bool <a class="el" href="class_bool_expr.html#a71269e33c73d10b922d274174287426c">rep</a>)</td></tr>
+&#160;</td><td class="memItemRight" valign="bottom"><b>BoolExpr</b> (bool rep)</td></tr>
 <tr class="separator:ab4aa6da7343faa4d39a46117ab8f1c21"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a058a0b6576d47399b7a532c70bc6518e"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_bool_expr.html#a058a0b6576d47399b7a532c70bc6518e">equals</a> (std::shared_ptr&lt; <a class="el" href="class_expr.html">Expr</a> &gt; e) override</td></tr>
-<tr class="memdesc:a058a0b6576d47399b7a532c70bc6518e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Checks the equality of two expr objects without interpretation.  <a href="class_bool_expr.html#a058a0b6576d47399b7a532c70bc6518e">More...</a><br /></td></tr>
-<tr class="separator:a058a0b6576d47399b7a532c70bc6518e"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a7afc259e00531e959a9c536e2ced2340"><td class="memItemLeft" align="right" valign="top">std::shared_ptr&lt; <a class="el" href="class_val.html">Val</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_bool_expr.html#a7afc259e00531e959a9c536e2ced2340">interp</a> (std::shared_ptr&lt; <a class="el" href="class_env.html">Env</a> &gt; env) override</td></tr>
-<tr class="memdesc:a7afc259e00531e959a9c536e2ced2340"><td class="mdescLeft">&#160;</td><td class="mdescRight">Interprets the result of an <a class="el" href="class_expr.html" title="An Abstract Class representing all the methods each subclass of Expr must implement.">Expr</a> if possible.  <a href="class_bool_expr.html#a7afc259e00531e959a9c536e2ced2340">More...</a><br /></td></tr>
-<tr class="separator:a7afc259e00531e959a9c536e2ced2340"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a88115d5a3c98c2497e4c44d0801e6c63"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_bool_expr.html#a88115d5a3c98c2497e4c44d0801e6c63">step_interp</a> () override</td></tr>
-<tr class="memdesc:a88115d5a3c98c2497e4c44d0801e6c63"><td class="mdescLeft">&#160;</td><td class="mdescRight">A variation of the interp method which allocates heap memory to support Exprs that require large amounts of recursion to interpret.  <a href="class_bool_expr.html#a88115d5a3c98c2497e4c44d0801e6c63">More...</a><br /></td></tr>
-<tr class="separator:a88115d5a3c98c2497e4c44d0801e6c63"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a8c00a1932fcf7f9539cf96ceb7bf5392"><td class="memItemLeft" align="right" valign="top"><a id="a8c00a1932fcf7f9539cf96ceb7bf5392"></a>
-bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_bool_expr.html#a8c00a1932fcf7f9539cf96ceb7bf5392">containsVar</a> () override</td></tr>
-<tr class="memdesc:a8c00a1932fcf7f9539cf96ceb7bf5392"><td class="mdescLeft">&#160;</td><td class="mdescRight">Checks if the <a class="el" href="class_expr.html" title="An Abstract Class representing all the methods each subclass of Expr must implement.">Expr</a> contains a variable. <br /></td></tr>
-<tr class="separator:a8c00a1932fcf7f9539cf96ceb7bf5392"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a1fd914b524ba4a2c987688aaadc8bde0"><td class="memItemLeft" align="right" valign="top"><a id="a1fd914b524ba4a2c987688aaadc8bde0"></a>
-std::shared_ptr&lt; <a class="el" href="class_expr.html">Expr</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_bool_expr.html#a1fd914b524ba4a2c987688aaadc8bde0">subst</a> (std::string var, std::shared_ptr&lt; <a class="el" href="class_val.html">Val</a> &gt; new_val) override</td></tr>
-<tr class="memdesc:a1fd914b524ba4a2c987688aaadc8bde0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Searches an <a class="el" href="class_expr.html" title="An Abstract Class representing all the methods each subclass of Expr must implement.">Expr</a> for an unbound variable: varName, and replaces that variable with new_val. <br /></td></tr>
-<tr class="separator:a1fd914b524ba4a2c987688aaadc8bde0"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ae9208e51f513eb4d2f6279466434cb94"><td class="memItemLeft" align="right" valign="top"><a id="ae9208e51f513eb4d2f6279466434cb94"></a>
-std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_bool_expr.html#ae9208e51f513eb4d2f6279466434cb94">exprToString</a> () override</td></tr>
-<tr class="memdesc:ae9208e51f513eb4d2f6279466434cb94"><td class="mdescLeft">&#160;</td><td class="mdescRight">Converts an <a class="el" href="class_expr.html" title="An Abstract Class representing all the methods each subclass of Expr must implement.">Expr</a> to its mathematical string representation, may add parentheses to preserve order of operations. <br /></td></tr>
-<tr class="separator:ae9208e51f513eb4d2f6279466434cb94"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a5b72ddd019dba5c39df1e73be4cf2057"><td class="memItemLeft" align="right" valign="top"><a id="a5b72ddd019dba5c39df1e73be4cf2057"></a>
-std::shared_ptr&lt; <a class="el" href="class_expr.html">Expr</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_bool_expr.html#a5b72ddd019dba5c39df1e73be4cf2057">optimize</a> () override</td></tr>
-<tr class="memdesc:a5b72ddd019dba5c39df1e73be4cf2057"><td class="mdescLeft">&#160;</td><td class="mdescRight">Simplifies an <a class="el" href="class_expr.html" title="An Abstract Class representing all the methods each subclass of Expr must implement.">Expr</a> if possible. <br /></td></tr>
-<tr class="separator:a5b72ddd019dba5c39df1e73be4cf2057"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="inherit_header pub_methods_class_literal_expr"><td colspan="2" onclick="javascript:toggleInherit('pub_methods_class_literal_expr')"><img src="closed.png" alt="-"/>&#160;Public Member Functions inherited from <a class="el" href="class_literal_expr.html">LiteralExpr</a></td></tr>
+<tr class="memitem:ae65c9a38a633e2e8bc60fa379bbaefb1 inherit pub_methods_class_literal_expr"><td class="memItemLeft" align="right" valign="top"><a id="ae65c9a38a633e2e8bc60fa379bbaefb1"></a>
+&#160;</td><td class="memItemRight" valign="bottom"><b>LiteralExpr</b> (std::shared_ptr&lt; <a class="el" href="class_val.html">Val</a> &gt; val)</td></tr>
+<tr class="separator:ae65c9a38a633e2e8bc60fa379bbaefb1 inherit pub_methods_class_literal_expr"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2e0424bf2bc5dc3ba3a3c27b9111213a inherit pub_methods_class_literal_expr"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_literal_expr.html#a2e0424bf2bc5dc3ba3a3c27b9111213a">equals</a> (std::shared_ptr&lt; <a class="el" href="class_expr.html">Expr</a> &gt; e) override</td></tr>
+<tr class="memdesc:a2e0424bf2bc5dc3ba3a3c27b9111213a inherit pub_methods_class_literal_expr"><td class="mdescLeft">&#160;</td><td class="mdescRight">Checks the equality of two expr objects without interpretation.  <a href="class_literal_expr.html#a2e0424bf2bc5dc3ba3a3c27b9111213a">More...</a><br /></td></tr>
+<tr class="separator:a2e0424bf2bc5dc3ba3a3c27b9111213a inherit pub_methods_class_literal_expr"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abf939bdf14a18fad9912e516fabd1022 inherit pub_methods_class_literal_expr"><td class="memItemLeft" align="right" valign="top">std::shared_ptr&lt; <a class="el" href="class_val.html">Val</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_literal_expr.html#abf939bdf14a18fad9912e516fabd1022">interp</a> (std::shared_ptr&lt; <a class="el" href="class_env.html">Env</a> &gt; env) override</td></tr>
+<tr class="memdesc:abf939bdf14a18fad9912e516fabd1022 inherit pub_methods_class_literal_expr"><td class="mdescLeft">&#160;</td><td class="mdescRight">Interprets the result of an <a class="el" href="class_expr.html" title="An Abstract Class representing all the methods each subclass of Expr must implement.">Expr</a> if possible.  <a href="class_literal_expr.html#abf939bdf14a18fad9912e516fabd1022">More...</a><br /></td></tr>
+<tr class="separator:abf939bdf14a18fad9912e516fabd1022 inherit pub_methods_class_literal_expr"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2b38d20a5b36fca52c9eee19d190ed02 inherit pub_methods_class_literal_expr"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_literal_expr.html#a2b38d20a5b36fca52c9eee19d190ed02">step_interp</a> () override</td></tr>
+<tr class="memdesc:a2b38d20a5b36fca52c9eee19d190ed02 inherit pub_methods_class_literal_expr"><td class="mdescLeft">&#160;</td><td class="mdescRight">A variation of the interp method which allocates heap memory to support Exprs that require large amounts of recursion to interpret.  <a href="class_literal_expr.html#a2b38d20a5b36fca52c9eee19d190ed02">More...</a><br /></td></tr>
+<tr class="separator:a2b38d20a5b36fca52c9eee19d190ed02 inherit pub_methods_class_literal_expr"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aae31edbb282178b8839085820586b90b inherit pub_methods_class_literal_expr"><td class="memItemLeft" align="right" valign="top"><a id="aae31edbb282178b8839085820586b90b"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_literal_expr.html#aae31edbb282178b8839085820586b90b">containsVar</a> () override</td></tr>
+<tr class="memdesc:aae31edbb282178b8839085820586b90b inherit pub_methods_class_literal_expr"><td class="mdescLeft">&#160;</td><td class="mdescRight">Checks if the <a class="el" href="class_expr.html" title="An Abstract Class representing all the methods each subclass of Expr must implement.">Expr</a> contains a variable. <br /></td></tr>
+<tr class="separator:aae31edbb282178b8839085820586b90b inherit pub_methods_class_literal_expr"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac41634f279bf47e61f19856635db2fb2 inherit pub_methods_class_literal_expr"><td class="memItemLeft" align="right" valign="top"><a id="ac41634f279bf47e61f19856635db2fb2"></a>
+std::shared_ptr&lt; <a class="el" href="class_expr.html">Expr</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_literal_expr.html#ac41634f279bf47e61f19856635db2fb2">subst</a> (std::string varName, std::shared_ptr&lt; <a class="el" href="class_val.html">Val</a> &gt; new_val) override</td></tr>
+<tr class="memdesc:ac41634f279bf47e61f19856635db2fb2 inherit pub_methods_class_literal_expr"><td class="mdescLeft">&#160;</td><td class="mdescRight">Searches an <a class="el" href="class_expr.html" title="An Abstract Class representing all the methods each subclass of Expr must implement.">Expr</a> for an unbound variable: varName, and replaces that variable with new_val. <br /></td></tr>
+<tr class="separator:ac41634f279bf47e61f19856635db2fb2 inherit pub_methods_class_literal_expr"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad499dee3eb20448ec794a5a196af47c4 inherit pub_methods_class_literal_expr"><td class="memItemLeft" align="right" valign="top"><a id="ad499dee3eb20448ec794a5a196af47c4"></a>
+std::shared_ptr&lt; <a class="el" href="class_expr.html">Expr</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_literal_expr.html#ad499dee3eb20448ec794a5a196af47c4">optimize</a> () override</td></tr>
+<tr class="memdesc:ad499dee3eb20448ec794a5a196af47c4 inherit pub_methods_class_literal_expr"><td class="mdescLeft">&#160;</td><td class="mdescRight">Simplifies an <a class="el" href="class_expr.html" title="An Abstract Class representing all the methods each subclass of Expr must implement.">Expr</a> if possible. <br /></td></tr>
+<tr class="separator:ad499dee3eb20448ec794a5a196af47c4 inherit pub_methods_class_literal_expr"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0ddeb8b7b669d11129c87cc3b8ae9fbe inherit pub_methods_class_literal_expr"><td class="memItemLeft" align="right" valign="top"><a id="a0ddeb8b7b669d11129c87cc3b8ae9fbe"></a>
+std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_literal_expr.html#a0ddeb8b7b669d11129c87cc3b8ae9fbe">to_string</a> () override</td></tr>
+<tr class="memdesc:a0ddeb8b7b669d11129c87cc3b8ae9fbe inherit pub_methods_class_literal_expr"><td class="mdescLeft">&#160;</td><td class="mdescRight">Converts an <a class="el" href="class_expr.html" title="An Abstract Class representing all the methods each subclass of Expr must implement.">Expr</a> to its mathematical string representation, may add parentheses to preserve order of operations. <br /></td></tr>
+<tr class="separator:a0ddeb8b7b669d11129c87cc3b8ae9fbe inherit pub_methods_class_literal_expr"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-attribs"></a>
 Public Attributes</h2></td></tr>
 <tr class="memitem:a71269e33c73d10b922d274174287426c"><td class="memItemLeft" align="right" valign="top"><a id="a71269e33c73d10b922d274174287426c"></a>
-bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_bool_expr.html#a71269e33c73d10b922d274174287426c">rep</a></td></tr>
-<tr class="memdesc:a71269e33c73d10b922d274174287426c"><td class="mdescLeft">&#160;</td><td class="mdescRight">A boolean representation of the <a class="el" href="class_bool_expr.html" title="An Expr that represents a boolean.">BoolExpr</a> keywords _true or _false. <br /></td></tr>
+bool&#160;</td><td class="memItemRight" valign="bottom"><b>rep</b></td></tr>
 <tr class="separator:a71269e33c73d10b922d274174287426c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abf66cd9ce307d46423c04a51378dccf1"><td class="memItemLeft" align="right" valign="top"><a id="abf66cd9ce307d46423c04a51378dccf1"></a>
+<a class="el" href="class_val.html">Val</a> *&#160;</td><td class="memItemRight" valign="bottom"><b>val</b></td></tr>
+<tr class="separator:abf66cd9ce307d46423c04a51378dccf1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="inherit_header pub_attribs_class_literal_expr"><td colspan="2" onclick="javascript:toggleInherit('pub_attribs_class_literal_expr')"><img src="closed.png" alt="-"/>&#160;Public Attributes inherited from <a class="el" href="class_literal_expr.html">LiteralExpr</a></td></tr>
+<tr class="memitem:a2ed0c7fa0b711cd7c59e4834adf3ea2f inherit pub_attribs_class_literal_expr"><td class="memItemLeft" align="right" valign="top"><a id="a2ed0c7fa0b711cd7c59e4834adf3ea2f"></a>
+std::shared_ptr&lt; <a class="el" href="class_val.html">Val</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>val</b></td></tr>
+<tr class="separator:a2ed0c7fa0b711cd7c59e4834adf3ea2f inherit pub_attribs_class_literal_expr"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><p>An <a class="el" href="class_expr.html" title="An Abstract Class representing all the methods each subclass of Expr must implement.">Expr</a> that represents a boolean. </p>
-<p>Ex. _true. </p>
-</div><h2 class="groupheader">Member Function Documentation</h2>
-<a id="a058a0b6576d47399b7a532c70bc6518e"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a058a0b6576d47399b7a532c70bc6518e">&#9670;&nbsp;</a></span>equals()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">bool BoolExpr::equals </td>
-          <td>(</td>
-          <td class="paramtype">std::shared_ptr&lt; <a class="el" href="class_expr.html">Expr</a> &gt;&#160;</td>
-          <td class="paramname"><em>e</em></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">override</span><span class="mlabel">virtual</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Checks the equality of two expr objects without interpretation. </p>
-<p>Note: Order matters! Ex: 1+2 != 2+1. Note: Expressions that simplify or interpret to the same result are not equal. </p>
-
-<p>Implements <a class="el" href="class_expr.html#a6e4dd2ed00c6b6a6f4cba7d82e703551">Expr</a>.</p>
-
-</div>
-</div>
-<a id="a7afc259e00531e959a9c536e2ced2340"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a7afc259e00531e959a9c536e2ced2340">&#9670;&nbsp;</a></span>interp()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">std::shared_ptr&lt; <a class="el" href="class_val.html">Val</a> &gt; BoolExpr::interp </td>
-          <td>(</td>
-          <td class="paramtype">std::shared_ptr&lt; <a class="el" href="class_env.html">Env</a> &gt;&#160;</td>
-          <td class="paramname"><em>env</em></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">override</span><span class="mlabel">virtual</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Interprets the result of an <a class="el" href="class_expr.html" title="An Abstract Class representing all the methods each subclass of Expr must implement.">Expr</a> if possible. </p>
-<p>If the <a class="el" href="class_expr.html" title="An Abstract Class representing all the methods each subclass of Expr must implement.">Expr</a> contains unbound variable and appropriate exception will be generated </p>
-
-<p>Implements <a class="el" href="class_expr.html#ab05b606f56db99332cbb7f460a975d08">Expr</a>.</p>
-
-</div>
-</div>
-<a id="a88115d5a3c98c2497e4c44d0801e6c63"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a88115d5a3c98c2497e4c44d0801e6c63">&#9670;&nbsp;</a></span>step_interp()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">void BoolExpr::step_interp </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">override</span><span class="mlabel">virtual</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>A variation of the interp method which allocates heap memory to support Exprs that require large amounts of recursion to interpret. </p>
-<p>Does not return a value but sets a global variable Step::val to the result. This value can be returned by the interp_by_steps method of the <a class="el" href="class_step.html" title="A class generated to enable evaluation of expressions which requier lots of recursion.">Step</a> class </p>
-
-<p>Implements <a class="el" href="class_expr.html#a51f5c5358e8569a181c43bf404931d47">Expr</a>.</p>
-
-</div>
-</div>
-<hr/>The documentation for this class was generated from the following files:<ul>
+<div class="textblock"><p>A class that is used to represent number expressions as objects. </p>
+<p>At this point simply a stub class that calls a <a class="el" href="class_literal_expr.html" title="A general class that is used to represent boolean and number expressions as objects.">LiteralExpr</a> Constructor. The stub is used to enable old tests. </p>
+</div><hr/>The documentation for this class was generated from the following files:<ul>
 <li>MSDLang/<a class="el" href="_expr_8h_source.html">Expr.h</a></li>
 <li>MSDLang/Expr.cpp</li>
 </ul>

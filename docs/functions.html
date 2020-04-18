@@ -26,7 +26,7 @@
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">MSDScript
-   &#160;<span id="projectnumber">1.0</span>
+   &#160;<span id="projectnumber">1.1</span>
    </div>
    <div id="projectbrief">A simple scripting language for evaluating expressions</div>
   </td>
@@ -105,16 +105,13 @@ $(document).ready(function(){initNavTree('functions.html',''); initResizable(); 
 : <a class="el" href="class_if_expr.html#a82dff58471d24eaaf55daf7db9485a20">IfExpr</a>
 </li>
 <li>containsVar()
-: <a class="el" href="class_add_expr.html#ae34e1a1bce3f13106c609f76655a4007">AddExpr</a>
-, <a class="el" href="class_bool_expr.html#a8c00a1932fcf7f9539cf96ceb7bf5392">BoolExpr</a>
+: <a class="el" href="class_binary_op_expr.html#a1c7edfab3a51b00f6b9e432d7a066583">BinaryOpExpr</a>
 , <a class="el" href="class_call_expr.html#ab37b4ea88cf1159689d6979747c0d37c">CallExpr</a>
-, <a class="el" href="class_comp_arg.html#a8151a54af9daf16a7066fabc197397e2">CompArg</a>
 , <a class="el" href="class_expr.html#a0d248ac8e7df77dc34ae1310d1fb70fc">Expr</a>
 , <a class="el" href="class_fun_expr.html#afb8d8a8c2b6a57677def6e2a0f46b694">FunExpr</a>
 , <a class="el" href="class_if_expr.html#ae1d5068dcbaad4219a958a37f30c415a">IfExpr</a>
 , <a class="el" href="class_let_expr.html#a57be8302e010b7fc923f18f576ca7239">LetExpr</a>
-, <a class="el" href="class_mult_expr.html#a01f0c28825079389393bb217cc0ad2e0">MultExpr</a>
-, <a class="el" href="class_num_expr.html#ad0514edf66b0187936974dbce1d79d8b">NumExpr</a>
+, <a class="el" href="class_literal_expr.html#aae31edbb282178b8839085820586b90b">LiteralExpr</a>
 , <a class="el" href="class_var_expr.html#acec2f654b9f0e96e2860a763f93a85cb">VarExpr</a>
 </li>
 </ul>
@@ -122,30 +119,15 @@ $(document).ready(function(){initNavTree('functions.html',''); initResizable(); 
 
 <h3><a id="index_e"></a>- e -</h3><ul>
 <li>equals()
-: <a class="el" href="class_add_expr.html#a8a307c9502f81f4db21182aa1f6181b1">AddExpr</a>
-, <a class="el" href="class_bool_expr.html#a058a0b6576d47399b7a532c70bc6518e">BoolExpr</a>
+: <a class="el" href="class_binary_op.html#a280313f57c75becff17c9a5e12261be5">BinaryOp</a>
+, <a class="el" href="class_binary_op_expr.html#ad31dcb67b0cd439d8a6f6f19812ef976">BinaryOpExpr</a>
 , <a class="el" href="class_call_expr.html#ae2a1894068fb027cfcae202268f1a765">CallExpr</a>
-, <a class="el" href="class_comp_arg.html#a6a998562b4996ea8a56a6fa2dc1a571f">CompArg</a>
 , <a class="el" href="class_expr.html#a6e4dd2ed00c6b6a6f4cba7d82e703551">Expr</a>
 , <a class="el" href="class_fun_expr.html#a135a175cfa2ab56f3f911f20c118d0b9">FunExpr</a>
 , <a class="el" href="class_if_expr.html#a1ca0b6929d2344e1a803b7570e76890d">IfExpr</a>
 , <a class="el" href="class_let_expr.html#a1a654b5c799a51fdc515e169690589ec">LetExpr</a>
-, <a class="el" href="class_mult_expr.html#ab738d65bbc4fa2fa0eb1642e2631dba6">MultExpr</a>
-, <a class="el" href="class_num_expr.html#aeefec1ec7f5ea7a1a1a606c7bee1ad20">NumExpr</a>
+, <a class="el" href="class_literal_expr.html#a2e0424bf2bc5dc3ba3a3c27b9111213a">LiteralExpr</a>
 , <a class="el" href="class_var_expr.html#a8bf647fbe92681f2f6cf1d624c3139f1">VarExpr</a>
-</li>
-<li>exprToString()
-: <a class="el" href="class_add_expr.html#acbd8e16e2b4f175c63853ded0c81d2a1">AddExpr</a>
-, <a class="el" href="class_bool_expr.html#ae9208e51f513eb4d2f6279466434cb94">BoolExpr</a>
-, <a class="el" href="class_call_expr.html#a2cdc3505d2af42409c072c849bd2927b">CallExpr</a>
-, <a class="el" href="class_comp_arg.html#a0096d0a728e51cd583a2e31b3011f3bd">CompArg</a>
-, <a class="el" href="class_expr.html#a011a0c281d94957f33b22499a5ff6f33">Expr</a>
-, <a class="el" href="class_fun_expr.html#aaa361593ee066ddf8931de85a1997369">FunExpr</a>
-, <a class="el" href="class_if_expr.html#a9f2e45f694da22488e93fddf6b2b472a">IfExpr</a>
-, <a class="el" href="class_let_expr.html#a57148397766cadb906aa4fe34cd521ae">LetExpr</a>
-, <a class="el" href="class_mult_expr.html#ad6f38907549bc730f2000b14e04254a8">MultExpr</a>
-, <a class="el" href="class_num_expr.html#ae33006d7e3bee480a98f0a88eb304a8f">NumExpr</a>
-, <a class="el" href="class_var_expr.html#a840dd54cf7d64d72a53f60d155bb235a">VarExpr</a>
 </li>
 </ul>
 
@@ -162,26 +144,14 @@ $(document).ready(function(){initNavTree('functions.html',''); initResizable(); 
 
 <h3><a id="index_i"></a>- i -</h3><ul>
 <li>interp()
-: <a class="el" href="class_add_expr.html#a832a4814f5213cab60cb6e8296779ca0">AddExpr</a>
-, <a class="el" href="class_bool_expr.html#a7afc259e00531e959a9c536e2ced2340">BoolExpr</a>
+: <a class="el" href="class_binary_op_expr.html#a6460c09cadbf680239b1e9ce96f54eda">BinaryOpExpr</a>
 , <a class="el" href="class_call_expr.html#ae52ea95dfd1cea0bc72feb7a7c05c004">CallExpr</a>
-, <a class="el" href="class_comp_arg.html#a296d36d860595330c09b02ceba4bf4e6">CompArg</a>
 , <a class="el" href="class_expr.html#ab05b606f56db99332cbb7f460a975d08">Expr</a>
 , <a class="el" href="class_fun_expr.html#af354134b7d1aae43ca17e0abbdeb99a6">FunExpr</a>
 , <a class="el" href="class_if_expr.html#adeace752d5ed220976f769e9c89f53cc">IfExpr</a>
 , <a class="el" href="class_let_expr.html#a29c1bfd3ec1f234aea5f6b44caf795cf">LetExpr</a>
-, <a class="el" href="class_mult_expr.html#aa0c7bf289fe220037777888ec027c41f">MultExpr</a>
-, <a class="el" href="class_num_expr.html#ac0b045ea6dabda8780084e820e05556a">NumExpr</a>
+, <a class="el" href="class_literal_expr.html#abf939bdf14a18fad9912e516fabd1022">LiteralExpr</a>
 , <a class="el" href="class_var_expr.html#aa3813a2aabd1b9b7927fc541226d290e">VarExpr</a>
-</li>
-</ul>
-
-
-<h3><a id="index_l"></a>- l -</h3><ul>
-<li>lhs
-: <a class="el" href="class_add_expr.html#a4a960c6a8e05b83b99e1329643bd48df">AddExpr</a>
-, <a class="el" href="class_comp_arg.html#a153f611ade0edc4b09f8be1c72133960">CompArg</a>
-, <a class="el" href="class_mult_expr.html#a1ac8b01114f0fe98deee97b5ca15fdde">MultExpr</a>
 </li>
 </ul>
 
@@ -195,60 +165,58 @@ $(document).ready(function(){initNavTree('functions.html',''); initResizable(); 
 
 <h3><a id="index_o"></a>- o -</h3><ul>
 <li>optimize()
-: <a class="el" href="class_add_expr.html#a9011ddb8f6f95cc3248d55bffccb1089">AddExpr</a>
-, <a class="el" href="class_bool_expr.html#a5b72ddd019dba5c39df1e73be4cf2057">BoolExpr</a>
+: <a class="el" href="class_binary_op_expr.html#a32d024ea70cf96f4bbddce7f6239af11">BinaryOpExpr</a>
 , <a class="el" href="class_call_expr.html#a5e9b954bb2f45e2ad14e40f0e7d3491c">CallExpr</a>
-, <a class="el" href="class_comp_arg.html#a68b463b9cd2d0e543b6f6c50070d7931">CompArg</a>
 , <a class="el" href="class_expr.html#a3e05700ddbde5f929ba14ec6333cca68">Expr</a>
 , <a class="el" href="class_fun_expr.html#a9973ba69c39a42a994f31eb026dd3b5c">FunExpr</a>
 , <a class="el" href="class_if_expr.html#aaa5fe1d848b52dd9459132c2a08db83a">IfExpr</a>
 , <a class="el" href="class_let_expr.html#a142f973ee41b17351fc3aa6a649c27e3">LetExpr</a>
-, <a class="el" href="class_mult_expr.html#a196701c86037221f6761a39d5e9068f3">MultExpr</a>
-, <a class="el" href="class_num_expr.html#ad1bca025ab828bad606ca23e55355790">NumExpr</a>
+, <a class="el" href="class_literal_expr.html#ad499dee3eb20448ec794a5a196af47c4">LiteralExpr</a>
 , <a class="el" href="class_var_expr.html#aab30566d34b9a28243bde7a79486f156">VarExpr</a>
 </li>
 </ul>
 
 
-<h3><a id="index_r"></a>- r -</h3><ul>
-<li>rep
-: <a class="el" href="class_bool_expr.html#a71269e33c73d10b922d274174287426c">BoolExpr</a>
-, <a class="el" href="class_num_expr.html#a928fe1ffd7cedd357ebb37d6a21adefa">NumExpr</a>
+<h3><a id="index_p"></a>- p -</h3><ul>
+<li>perform()
+: <a class="el" href="class_add_op.html#afbb0028d92dea2269cefe58f28ff1211">AddOp</a>
+, <a class="el" href="class_binary_op.html#ad0a7a3b3926d0da98bafcaa88cd84750">BinaryOp</a>
+, <a class="el" href="class_comp_not_op.html#af9ffd4a3e5e8ddf5fa4f77ac8295976c">CompNotOp</a>
+, <a class="el" href="class_comp_op.html#a286e226921dd0fbf631c0bee82ef2866">CompOp</a>
+, <a class="el" href="class_div_op.html#ab4cb22555c6adf407d876820e0d3aad2">DivOp</a>
+, <a class="el" href="class_mod_op.html#a052b421eac476f567c0dc55283829e5b">ModOp</a>
+, <a class="el" href="class_mult_op.html#ac02487bb611897344628c3498a3ddaf1">MultOp</a>
+, <a class="el" href="class_sub_op.html#ae83fc5b804049f92a55981059d559a2c">SubOp</a>
 </li>
+</ul>
+
+
+<h3><a id="index_r"></a>- r -</h3><ul>
 <li>rhs
-: <a class="el" href="class_add_expr.html#abdf770a7f017d95bcbe176d9c407b6ea">AddExpr</a>
-, <a class="el" href="class_comp_arg.html#a555d8c34937fb0af4b4fd507497445c5">CompArg</a>
-, <a class="el" href="class_let_expr.html#aa3d0dd7594661fda64ee295dda943199">LetExpr</a>
-, <a class="el" href="class_mult_expr.html#a21bc7844f9aa42cd035b031f89d7b250">MultExpr</a>
+: <a class="el" href="class_let_expr.html#aa3d0dd7594661fda64ee295dda943199">LetExpr</a>
 </li>
 </ul>
 
 
 <h3><a id="index_s"></a>- s -</h3><ul>
 <li>step_interp()
-: <a class="el" href="class_add_expr.html#ad06dd0c33ae40908d2e788517f547e00">AddExpr</a>
-, <a class="el" href="class_bool_expr.html#a88115d5a3c98c2497e4c44d0801e6c63">BoolExpr</a>
+: <a class="el" href="class_binary_op_expr.html#a7a363b96b29dac504da2ef8146c27830">BinaryOpExpr</a>
 , <a class="el" href="class_call_expr.html#aebe091f269f22c1d76e9225bd0d68ef8">CallExpr</a>
-, <a class="el" href="class_comp_arg.html#a2861bcfb18e7c6c5612e947b424fcb1f">CompArg</a>
 , <a class="el" href="class_expr.html#a51f5c5358e8569a181c43bf404931d47">Expr</a>
 , <a class="el" href="class_fun_expr.html#a9391b27dd2eac6a484effcde9fb7af6a">FunExpr</a>
 , <a class="el" href="class_if_expr.html#a58744e96f126876a9d64311eccf01fde">IfExpr</a>
 , <a class="el" href="class_let_expr.html#a5cbea78090c0d44a18596d3ab7f3cd2e">LetExpr</a>
-, <a class="el" href="class_mult_expr.html#aeacf08227deef7c7e7321ece2636c0e5">MultExpr</a>
-, <a class="el" href="class_num_expr.html#a1f4b7e10a849935e1260e3ce3730177c">NumExpr</a>
+, <a class="el" href="class_literal_expr.html#a2b38d20a5b36fca52c9eee19d190ed02">LiteralExpr</a>
 , <a class="el" href="class_var_expr.html#a0e9ae7440034001ce699d5b2b885c099">VarExpr</a>
 </li>
 <li>subst()
-: <a class="el" href="class_add_expr.html#a78ba15d3d623d389a65a1636a5d3e8ce">AddExpr</a>
-, <a class="el" href="class_bool_expr.html#a1fd914b524ba4a2c987688aaadc8bde0">BoolExpr</a>
+: <a class="el" href="class_binary_op_expr.html#aea43e4ce913cb12f912ae5ac0b7e239b">BinaryOpExpr</a>
 , <a class="el" href="class_call_expr.html#af947adf7b530475b3128eedda43fcc42">CallExpr</a>
-, <a class="el" href="class_comp_arg.html#a895d3ac04dce4fd14ffcb6cda1518265">CompArg</a>
 , <a class="el" href="class_expr.html#a1800b984e989bb74e48bc2b8c6ebee05">Expr</a>
 , <a class="el" href="class_fun_expr.html#a06403774d1e323bcd92d9bed445495d2">FunExpr</a>
 , <a class="el" href="class_if_expr.html#a86cc6e10457486346b503bbe1962a098">IfExpr</a>
 , <a class="el" href="class_let_expr.html#a40893e30cb8916dd44fedf7f9497d2aa">LetExpr</a>
-, <a class="el" href="class_mult_expr.html#aa0e996d392dcd0c57853e536944456c9">MultExpr</a>
-, <a class="el" href="class_num_expr.html#a3d7f6606ee6e89ed3a2940cb7c19ba41">NumExpr</a>
+, <a class="el" href="class_literal_expr.html#ac41634f279bf47e61f19856635db2fb2">LiteralExpr</a>
 , <a class="el" href="class_var_expr.html#a7f997555efb4b04989a3957b2c70388a">VarExpr</a>
 </li>
 </ul>
@@ -257,6 +225,24 @@ $(document).ready(function(){initNavTree('functions.html',''); initResizable(); 
 <h3><a id="index_t"></a>- t -</h3><ul>
 <li>to_be_called
 : <a class="el" href="class_call_expr.html#abfb7ff056c5d879bed649461ffcf7b8d">CallExpr</a>
+</li>
+<li>to_string()
+: <a class="el" href="class_add_op.html#ac8306d0615b7bad439dedc84f2a803aa">AddOp</a>
+, <a class="el" href="class_binary_op.html#a6934e2139c38f3eef0469456e0eab61a">BinaryOp</a>
+, <a class="el" href="class_binary_op_expr.html#a60d0b97887e76097c06c1044c33c0ab9">BinaryOpExpr</a>
+, <a class="el" href="class_call_expr.html#aa6fa5bb367faf8a031e4415449599004">CallExpr</a>
+, <a class="el" href="class_comp_not_op.html#ae0fd435e44b56f6f9948a3317fd3124b">CompNotOp</a>
+, <a class="el" href="class_comp_op.html#a511f502c8117769e706cc8d5127dc7e9">CompOp</a>
+, <a class="el" href="class_div_op.html#a1dcdcfd86b868a4e7dd012b9f7f55189">DivOp</a>
+, <a class="el" href="class_expr.html#a2c170268b82af106cd87642c759b6f1b">Expr</a>
+, <a class="el" href="class_fun_expr.html#a46c208b4d9181b3b61b67402c9c85a0f">FunExpr</a>
+, <a class="el" href="class_if_expr.html#a906a83d4b478fecb10f610f6f4f888b0">IfExpr</a>
+, <a class="el" href="class_let_expr.html#a8e4f33ad9351dc79a19ac42303545ec8">LetExpr</a>
+, <a class="el" href="class_literal_expr.html#a0ddeb8b7b669d11129c87cc3b8ae9fbe">LiteralExpr</a>
+, <a class="el" href="class_mod_op.html#acc5c6650241a36aee494574512b0e37d">ModOp</a>
+, <a class="el" href="class_mult_op.html#aace49b5d6f7e3d7be457eb6acf94bcd8">MultOp</a>
+, <a class="el" href="class_sub_op.html#a0f6f3fc771a212aaadeef51f5ca9b6cd">SubOp</a>
+, <a class="el" href="class_var_expr.html#adee6a906e66f0fcc77274517a79481db">VarExpr</a>
 </li>
 <li>trueConseq
 : <a class="el" href="class_if_expr.html#a80c1c8bd9bcef319a1a96c4f38bf0e6f">IfExpr</a>

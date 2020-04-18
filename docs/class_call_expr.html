@@ -26,7 +26,7 @@
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">MSDScript
-   &#160;<span id="projectnumber">1.0</span>
+   &#160;<span id="projectnumber">1.1</span>
    </div>
    <div id="projectbrief">A simple scripting language for evaluating expressions</div>
   </td>
@@ -117,10 +117,10 @@ Public Member Functions</h2></td></tr>
 std::shared_ptr&lt; <a class="el" href="class_expr.html">Expr</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_call_expr.html#af947adf7b530475b3128eedda43fcc42">subst</a> (std::string var, std::shared_ptr&lt; <a class="el" href="class_val.html">Val</a> &gt; newVal) override</td></tr>
 <tr class="memdesc:af947adf7b530475b3128eedda43fcc42"><td class="mdescLeft">&#160;</td><td class="mdescRight">Searches an <a class="el" href="class_expr.html" title="An Abstract Class representing all the methods each subclass of Expr must implement.">Expr</a> for an unbound variable: varName, and replaces that variable with new_val. <br /></td></tr>
 <tr class="separator:af947adf7b530475b3128eedda43fcc42"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a2cdc3505d2af42409c072c849bd2927b"><td class="memItemLeft" align="right" valign="top"><a id="a2cdc3505d2af42409c072c849bd2927b"></a>
-std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_call_expr.html#a2cdc3505d2af42409c072c849bd2927b">exprToString</a> () override</td></tr>
-<tr class="memdesc:a2cdc3505d2af42409c072c849bd2927b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Converts an <a class="el" href="class_expr.html" title="An Abstract Class representing all the methods each subclass of Expr must implement.">Expr</a> to its mathematical string representation, may add parentheses to preserve order of operations. <br /></td></tr>
-<tr class="separator:a2cdc3505d2af42409c072c849bd2927b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa6fa5bb367faf8a031e4415449599004"><td class="memItemLeft" align="right" valign="top"><a id="aa6fa5bb367faf8a031e4415449599004"></a>
+std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_call_expr.html#aa6fa5bb367faf8a031e4415449599004">to_string</a> () override</td></tr>
+<tr class="memdesc:aa6fa5bb367faf8a031e4415449599004"><td class="mdescLeft">&#160;</td><td class="mdescRight">Converts an <a class="el" href="class_expr.html" title="An Abstract Class representing all the methods each subclass of Expr must implement.">Expr</a> to its mathematical string representation, may add parentheses to preserve order of operations. <br /></td></tr>
+<tr class="separator:aa6fa5bb367faf8a031e4415449599004"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a5e9b954bb2f45e2ad14e40f0e7d3491c"><td class="memItemLeft" align="right" valign="top"><a id="a5e9b954bb2f45e2ad14e40f0e7d3491c"></a>
 std::shared_ptr&lt; <a class="el" href="class_expr.html">Expr</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_call_expr.html#a5e9b954bb2f45e2ad14e40f0e7d3491c">optimize</a> () override</td></tr>
 <tr class="memdesc:a5e9b954bb2f45e2ad14e40f0e7d3491c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Simplifies an <a class="el" href="class_expr.html" title="An Abstract Class representing all the methods each subclass of Expr must implement.">Expr</a> if possible. <br /></td></tr>
@@ -134,7 +134,7 @@ bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="clas
 Public Attributes</h2></td></tr>
 <tr class="memitem:abfb7ff056c5d879bed649461ffcf7b8d"><td class="memItemLeft" align="right" valign="top"><a id="abfb7ff056c5d879bed649461ffcf7b8d"></a>
 std::shared_ptr&lt; <a class="el" href="class_expr.html">Expr</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_call_expr.html#abfb7ff056c5d879bed649461ffcf7b8d">to_be_called</a></td></tr>
-<tr class="memdesc:abfb7ff056c5d879bed649461ffcf7b8d"><td class="mdescLeft">&#160;</td><td class="mdescRight">The name of repesentation of the <a class="el" href="class_fun_expr.html" title="An Expr that represents a function declaration.">FunExpr</a> that will be called. Ex: to_be_called(5) <br /></td></tr>
+<tr class="memdesc:abfb7ff056c5d879bed649461ffcf7b8d"><td class="mdescLeft">&#160;</td><td class="mdescRight">The name of repesentation of the <a class="el" href="class_fun_expr.html" title="An Expr that represents a function.">FunExpr</a> that will be called. Ex: to_be_called(5) <br /></td></tr>
 <tr class="separator:abfb7ff056c5d879bed649461ffcf7b8d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a969bf06306b3f142c747c47f9f3953e3"><td class="memItemLeft" align="right" valign="top"><a id="a969bf06306b3f142c747c47f9f3953e3"></a>
 std::shared_ptr&lt; <a class="el" href="class_expr.html">Expr</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_call_expr.html#a969bf06306b3f142c747c47f9f3953e3">actual_arg</a></td></tr>

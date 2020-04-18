@@ -26,7 +26,7 @@
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">MSDScript
-   &#160;<span id="projectnumber">1.0</span>
+   &#160;<span id="projectnumber">1.1</span>
    </div>
    <div id="projectbrief">A simple scripting language for evaluating expressions</div>
   </td>
@@ -94,235 +94,225 @@ Section Description</h1>
 A Note About WhiteSpace</h2>
 <p>MSDLang consumes white space in most cases which allows for flexibility and readability. The main exceptions are keywords such as <code>_true _false _let _if _then _else</code> that must have the <code>_</code> directly preceding them without any white space. The following example is incorrect and will cause parsing errors</p>
 <blockquote class="doxtable">
-<p>Example of disallowed whitespace: <code>_ let x=5 _ in 10</code></p>
-<p>Example of allowed whitespace: `_let count = <em>fun(count) _fun(n) _if n == 0 _then 0 _else 1 + count(count)(n + -1) _in count(count)(10)` </em></p>
+<p>Example of disallowed whitespace: <code>_let x=5 _ in 10</code></p>
+<p>Example of allowed whitespace: <br  />
+ <code>_let count = _fun(count) _fun(n)</code> <br  />
+ <code>_if n == 0</code> <br  />
+ <code>_then 0</code> <br  />
+ <code>_else 1 + count(count)(n + -1)</code> <br  />
+ <code>_in count(count)(10)</code> <br  />
+ </p>
 </blockquote>
-<p><em></em></p>
+<p><img src="https://raw.githubusercontent.com/SamBauter/MSDLang/master/ParsingGrammar.png" alt="Grammar Guide" width="40%" class="inline"/></p>
 <h2><a class="anchor" id="autotoc_md3"></a>
 Number Expressions</h2>
-<p><em> MSDLang supports interpretation of number integers from -2147483647 to 2147483647.</em></p>
-<p><em></p><blockquote class="doxtable">
+<p>MSDLang supports interpretation of number integers from -2147483647 to 2147483647.</p>
+<blockquote class="doxtable">
 <p>Ex: <code>-100</code> </p><blockquote class="doxtable">
 <p>Result: <code>-100</code> </p>
 </blockquote>
 </blockquote>
-<p></em></p>
-<p><em></em></p>
 <h2><a class="anchor" id="autotoc_md4"></a>
 Boolean Expressions</h2>
-<p><em> MSDLang supports interpretation of the boolean values <code>_true</code> and <code>_false</code>.</em></p>
-<p><em></p><blockquote class="doxtable">
+<p>MSDLang supports interpretation of the boolean values <code>_true</code> and <code>_false</code>.</p>
+<blockquote class="doxtable">
 <p>Ex: <code>_true</code> </p><blockquote class="doxtable">
 <p>Result: <code>_true</code> </p>
 </blockquote>
 </blockquote>
-<p></em></p>
-<p><em></em></p>
 <h2><a class="anchor" id="autotoc_md5"></a>
 Variable Expressions</h2>
-<p><em> MSDLang supports the evaluation of bound variables that have alphabetic names lower or upper case. Since unbound variables cannot be interpreted we instead can use the opt flag to simplify our unbound variable expression.</em></p>
-<p><em></p><blockquote class="doxtable">
+<p>MSDLang supports the evaluation of bound variables that have alphabetic names lower or upper case. Since unbound variables cannot be interpreted we instead can use the opt flag to simplify our unbound variable expression.</p>
+<blockquote class="doxtable">
 <p>Ex: <code>./MSDLangExec --opt</code> </p><blockquote class="doxtable">
 <p><code>varName</code> Result: <code>varName</code> </p>
 </blockquote>
 </blockquote>
-<p></em></p>
-<p><em></em></p>
 <h2><a class="anchor" id="autotoc_md6"></a>
+BinaryOp Expressions</h2>
+<p>MSDLang now uses a superclass for interpreting various binary operations of two or more expressions. Support for the following types of Binary Operations has now been added: Subtraction, Division, Modulo , and Not Equal to. Though these expressions do not have a section devoted to them in this grammar guide they all work similar to the Binary Expressions detailed below. Currently division only supports negative numbers</p>
+<blockquote class="doxtable">
+<p>Ex: <code>1-2</code> </p><blockquote class="doxtable">
+<p>Result: <code>-1</code> </p>
+</blockquote>
+</blockquote>
+<blockquote class="doxtable">
+<p>Ex: <code>-12/6</code> </p><blockquote class="doxtable">
+<p>Result: <code>-2</code> </p>
+</blockquote>
+</blockquote>
+<blockquote class="doxtable">
+<p>Ex: <code>12%6</code> </p><blockquote class="doxtable">
+<p>Result: <code>0</code> </p>
+</blockquote>
+</blockquote>
+<blockquote class="doxtable">
+<p>Ex: <code>7!=10</code> </p><blockquote class="doxtable">
+<p>Result: <code>_true</code> </p>
+</blockquote>
+</blockquote>
+<h2><a class="anchor" id="autotoc_md7"></a>
 Addition Expressions</h2>
-<p><em> MSDLang supports the interpretation of the addition of two or more expressions. Note that MSDLang does not support subtraction but does support the addition of negative numbers to accomplish the same goal see below example. The interpretation of addition expressions will proceed occuring to normal order of operations rules as shown in a below example. Note that parenthese can be used to provide flexibilty in order of operations.. These expressions must add to less than <code>INT_MAX</code> or to greater than <code>INT_MIN + 1</code>. Boolean addition is not supported by MSDLang as shown in below example. Variables must be bound in order to interpret to a value as shown below.</em></p>
-<p><em></p><blockquote class="doxtable">
+<p>MSDLang supports the interpretation of the addition of two or more expressions. Note that MSDLang does not support subtraction but does support the addition of negative numbers to accomplish the same goal see below example. The interpretation of addition expressions will proceed occuring to normal order of operations rules as shown in a below example. Note that parenthese can be used to provide flexibilty in order of operations.. These expressions must add to less than <code>INT_MAX</code> or to greater than <code>INT_MIN + 1</code>. Boolean addition is not supported by MSDLang as shown in below example. Variables must be bound in order to interpret to a value as shown below.</p>
+<blockquote class="doxtable">
 <p>Ex: <code>1+2</code> </p><blockquote class="doxtable">
 <p>Result: <code>3</code> </p>
 </blockquote>
 </blockquote>
-<p></em></p>
-<p><em></p><blockquote class="doxtable">
+<blockquote class="doxtable">
 <p>Ex: <code>-15+1</code> </p><blockquote class="doxtable">
 <p>Result: <code>-14</code> </p>
 </blockquote>
 </blockquote>
-<p></em></p>
-<p><em></p><blockquote class="doxtable">
+<blockquote class="doxtable">
 <p>Ex: <code>1+2+5*10</code> </p><blockquote class="doxtable">
 <p>Result: <code>53</code> </p>
 </blockquote>
 </blockquote>
-<p></em></p>
-<p><em></p><blockquote class="doxtable">
+<blockquote class="doxtable">
 <p>Ex: <code>(2+5)*10</code> </p><blockquote class="doxtable">
 <p>Result: <code>70</code> </p>
 </blockquote>
 </blockquote>
-<p></em></p>
-<p><em></p><blockquote class="doxtable">
+<blockquote class="doxtable">
 <p>Ex: <code>2147483647+1</code> </p><blockquote class="doxtable">
 <p>Result: <code>std::runtime_error: Cannot add_to <a class="el" href="class_val.html" title="An Abstract Class representing all the methods each subclass of Expr must implement.">Val</a> because of int Overflow</code> </p>
 </blockquote>
 </blockquote>
-<p></em></p>
-<p><em></p><blockquote class="doxtable">
+<blockquote class="doxtable">
 <p>Ex: <code>_false + 5</code> </p><blockquote class="doxtable">
 <p>Result: <code>std::runtime_error: no adding booleans</code> </p>
 </blockquote>
 </blockquote>
-<p></em></p>
-<p><em></p><blockquote class="doxtable">
+<blockquote class="doxtable">
 <p>Ex: <code>x + 10</code> </p><blockquote class="doxtable">
 <p>Result: <code>std::runtime_error: free variable: x</code> </p>
 </blockquote>
 </blockquote>
-<p></em></p>
-<p><em></em></p>
-<h2><a class="anchor" id="autotoc_md7"></a>
+<h2><a class="anchor" id="autotoc_md8"></a>
 Multiplication Expressions</h2>
-<p><em> MSDLang supports the interpretation of the multiplication of two or more expressions. The interpretation of multiplication expressions will proceed occuring to normal order of operations rules as shown in an below example. These expressions must result in less than <code>INT_MAX</code> or to greater than <code>INT_MIN + 1</code>. Boolean multiplication is not supported by MSDLang as shown in below example. Variables must be bound in order to interpret to a value as shown below.</em></p>
-<p><em></p><blockquote class="doxtable">
+<p>MSDLang supports the interpretation of the multiplication of two or more expressions. The interpretation of multiplication expressions will proceed occuring to normal order of operations rules as shown in an below example. These expressions must result in less than <code>INT_MAX</code> or to greater than <code>INT_MIN + 1</code>. Boolean multiplication is not supported by MSDLang as shown in below example. Variables must be bound in order to interpret to a value as shown below.</p>
+<blockquote class="doxtable">
 <p>Ex: <code>5*10</code> </p><blockquote class="doxtable">
 <p>Result: <code>50</code> </p>
 </blockquote>
 </blockquote>
-<p></em></p>
-<p><em></p><blockquote class="doxtable">
+<blockquote class="doxtable">
 <p>Ex: <code>5*-10</code> </p><blockquote class="doxtable">
 <p>Result <code>-50</code> </p>
 </blockquote>
 </blockquote>
-<p></em></p>
-<p><em></p><blockquote class="doxtable">
+<blockquote class="doxtable">
 <p>Ex: <code>(1+2)*10</code> </p><blockquote class="doxtable">
 <p>Result: <code>30</code> </p>
 </blockquote>
 </blockquote>
-<p></em></p>
-<p><em></p><blockquote class="doxtable">
+<blockquote class="doxtable">
 <p>Ex: <code>2147483647*2</code> </p><blockquote class="doxtable">
 <p>Result: <code>Cannot mult_with <a class="el" href="class_val.html" title="An Abstract Class representing all the methods each subclass of Expr must implement.">Val</a>, because of int Overflow</code> </p>
 </blockquote>
 </blockquote>
-<p></em></p>
-<p><em></p><blockquote class="doxtable">
+<blockquote class="doxtable">
 <p>Ex: <code>_false * 5</code> </p><blockquote class="doxtable">
 <p>Result: <code>std::runtime_error: no multiplying booleans</code> </p>
 </blockquote>
 </blockquote>
-<p></em></p>
-<p><em></p><blockquote class="doxtable">
+<blockquote class="doxtable">
 <p>Ex: <code>x * 10</code> </p><blockquote class="doxtable">
 <p>Result: <code>std::runtime_error: free variable: x</code> </p>
 </blockquote>
 </blockquote>
-<p></em></p>
-<p><em></em></p>
-<h2><a class="anchor" id="autotoc_md8"></a>
-Comparison Expressions</h2>
-<p><em> MSDLang supports the basic comparison operator <code>==</code> for expressions and returns a boolean of either <code>_true</code> or <code>_false</code> if the two expressions can be compared. Comparison of numbers, and booleans and any other expressions is supported. Booleans compared with numbers will always result in false as seen in below example (there are no truthy/falsy values in MSDLang). Comparison of unbound variables cannot be accomplished an will result in a runtime error as shows below.</em></p>
-<p><em></p><blockquote class="doxtable">
+<h2><a class="anchor" id="autotoc_md9"></a>
+Equal to Expressions</h2>
+<p>MSDLang supports the basic comparison operator <code>==</code> for expressions and returns a boolean of either <code>_true</code> or <code>_false</code> if the two expressions can be compared. Comparison of numbers, and booleans and any other expressions is supported. Booleans compared with numbers will always result in false as seen in below example (there are no truthy/falsy values in MSDLang). Comparison of unbound variables cannot be accomplished an will result in a runtime error as shows below.</p>
+<blockquote class="doxtable">
 <p>Ex: <code>1==1</code> </p><blockquote class="doxtable">
 <p>Result <code>_true</code> </p>
 </blockquote>
 </blockquote>
-<p></em></p>
-<p><em></p><blockquote class="doxtable">
+<blockquote class="doxtable">
 <p>Ex: <code>_true == _false</code> </p><blockquote class="doxtable">
 <p>Result <code>_false</code> </p>
 </blockquote>
 </blockquote>
-<p></em></p>
-<p><em></p><blockquote class="doxtable">
+<blockquote class="doxtable">
 <p>Ex: <code>1+2+5 * 5 == 15 * 2 + -2</code> </p><blockquote class="doxtable">
 <p>Result: <code>_true</code> </p>
 </blockquote>
 </blockquote>
-<p></em></p>
-<p><em></p><blockquote class="doxtable">
+<blockquote class="doxtable">
 <p>Ex: <code>_true == 1</code> </p><blockquote class="doxtable">
 <p>Result: <code>_false</code> </p>
 </blockquote>
 </blockquote>
-<p></em></p>
-<p><em></p><blockquote class="doxtable">
+<blockquote class="doxtable">
 <p>Ex: <code>_false == 0</code> </p><blockquote class="doxtable">
 <p>Result: <code>_false</code> </p>
 </blockquote>
 </blockquote>
-<p></em></p>
-<p><em></p><blockquote class="doxtable">
+<blockquote class="doxtable">
 <p>Ex: <code>x==x</code> </p><blockquote class="doxtable">
 <p>Result: <code>std::runtime_error: free variable: x</code> </p>
 </blockquote>
 </blockquote>
-<p></em></p>
-<p><em></em></p>
-<h2><a class="anchor" id="autotoc_md9"></a>
+<h2><a class="anchor" id="autotoc_md10"></a>
 Conditional Expressions</h2>
-<p><em> MSD Lang supports a conditional statement of the form: </p><blockquote class="doxtable">
+<p>MSD Lang supports a conditional statement of the form: </p><blockquote class="doxtable">
 <p><code>_if condition _then trueConsequence _else falseConsequence</code> </p>
 </blockquote>
-<p></em></p>
-<p><em>The condition must be an expression that reduces to a boolean value either <code>_true</code> or <code>_false</code> otherwise exceptions will be thrown as shown below. Again variables must be bound in order for interpretation to proceed.</em></p>
-<p><em></p><blockquote class="doxtable">
+<p>The condition must be an expression that reduces to a boolean value either <code>_true</code> or <code>_false</code> otherwise exceptions will be thrown as shown below. Again variables must be bound in order for interpretation to proceed.</p>
+<blockquote class="doxtable">
 <p>Ex: <code>_if _true _then 1 _else 0</code> </p><blockquote class="doxtable">
 <p>Result: <code>1</code> </p>
 </blockquote>
 </blockquote>
-<p></em></p>
-<p><em></p><blockquote class="doxtable">
+<blockquote class="doxtable">
 <p>Ex: <code>_if _false _then 1 _else 0</code> </p><blockquote class="doxtable">
 <p>Result: <code>0</code> </p>
 </blockquote>
 </blockquote>
-<p></em></p>
-<p><em></p><blockquote class="doxtable">
+<blockquote class="doxtable">
 <p>Ex: <code>_if 10==10 _then 1 _else 0</code> </p><blockquote class="doxtable">
 <p>Result: <code>1</code> </p>
 </blockquote>
 </blockquote>
-<p></em></p>
-<p><em></p><blockquote class="doxtable">
+<blockquote class="doxtable">
 <p>Ex: <code>_if 20==20 _then _true _else _false</code> </p><blockquote class="doxtable">
 <p>Result: <code>_true</code> </p>
 </blockquote>
 </blockquote>
-<p></em></p>
-<p><em></p><blockquote class="doxtable">
+<blockquote class="doxtable">
 <blockquote class="doxtable">
 <p>Ex: <code>if 10 _then _true _else _false</code> Result: <code>std::runtime_error: is_true was called on a <a class="el" href="class_num_val.html" title="A Val that represents a single number.">NumVal</a></code> </p>
 </blockquote>
 </blockquote>
-<p></em></p>
-<p><em></p><blockquote class="doxtable">
+<blockquote class="doxtable">
 <p>Ex: <code>_if x==x _then 1 _else 0</code> </p><blockquote class="doxtable">
 <p>Result: <code>std::runtime_error: free variable: x</code> </p>
 </blockquote>
 </blockquote>
-<p></em></p>
-<p><em></em></p>
-<h2><a class="anchor" id="autotoc_md10"></a>
+<h2><a class="anchor" id="autotoc_md11"></a>
 Let Expressions</h2>
-<p><em> MSDLang supports a construct called a let expression that allows assigning values to variables in order to create and Environment. This statement comes is communicated by this form: </p><blockquote class="doxtable">
+<p>MSDLang supports a construct called a let expression that allows assigning values to variables in order to create and Environment. This statement comes is communicated by this form: </p><blockquote class="doxtable">
 <p><code>_let varName=rhs_expresion _in body_expression</code> </p>
 </blockquote>
-<p></em></p>
-<p><em>The <code>rhs_expression</code> and <code>body_expression</code> must not contain free variables otherwise exceptions will be thrown. Variables can be bound to any type of expression. If the same variable is assigned a new value in a series of nested lets. The assignment in the deepest nested let will be used for interpretation of all the <code>body_expressions</code> occuring after it.</em></p>
-<p><em></p><blockquote class="doxtable">
+<p>The <code>rhs_expression</code> and <code>body_expression</code> must not contain free variables otherwise exceptions will be thrown during interpretation. Variables can be bound to any type of expression. If the same variable is assigned a new value in a series of nested lets. The assignment in the deepest nested let will be used for interpretation of all the <code>body_expressions</code> occuring after it. Note: a variable bound by <code>_let</code> is visible only in the corresponding <code>body_expression</code> of that let expression.</p>
+<blockquote class="doxtable">
 <p>Ex: <code>_let x=5 _ in x+1</code> </p><blockquote class="doxtable">
 <p>Result: <code>6</code> </p>
 </blockquote>
 </blockquote>
-<p></em></p>
-<p><em></p><blockquote class="doxtable">
+<blockquote class="doxtable">
 <p>Ex: <code>_let x=_true _in x==_true</code> </p><blockquote class="doxtable">
 <p>Result: <code>_true</code> </p>
 </blockquote>
 </blockquote>
-<p></em></p>
-<p><em></p><blockquote class="doxtable">
-<p>Ex: `_let x=5 _in _let x=1+x _in 1+x` </p><blockquote class="doxtable">
+<blockquote class="doxtable">
+<p>Ex: `_let x=5 <em>in _let x=1+x _in 1+x` </p><blockquote class="doxtable">
 <p>Result: <code>7</code> </p>
 </blockquote>
-</blockquote>
 <p></em></p>
+</blockquote>
 <p><em></p><blockquote class="doxtable">
 <p>Ex: `let x=5 _in _let x=1 _in x+1` </p><blockquote class="doxtable">
 <p>Result: <code>2</code> </p>
@@ -342,13 +332,13 @@ Let Expressions</h2>
 </blockquote>
 <p></em></p>
 <p><em></em></p>
-<h2><a class="anchor" id="autotoc_md11"></a>
+<h2><a class="anchor" id="autotoc_md12"></a>
 Function Expressions</h2>
 <p><em> MSDLang supports a function construct that is communicated in the following form: </p><blockquote class="doxtable">
 <p><code>_fun ( formal_argument ) _body_expression</code> </p>
 </blockquote>
 <p></em></p>
-<p><em>The formal argument must be an alphabetic variable. Otherwise an exception will be thrown. During interpretation Function Expressions will return and unreduced version of itself. This is the only expression that can be interpreted while containing free variables without throwing exceptions. Function expressions can only be reduced to Numbers or booleans when combine with a Call Expression.</em></p>
+<p><em>The formal argument must be an alphabetic variable. Otherwise an exception will be thrown. During interpretation Function Expressions will return and unreduced version of itself. This is the only expression that can be interpreted while containing free variables without throwing exceptions. Note: a variable bound by <code>_fun</code> is visible only in the corresponding <code>_fun</code> body. Function expressions can only be reduced to numbers or booleans when combined with a Call Expression.</em></p>
 <p><em></p><blockquote class="doxtable">
 <p>Ex: <code>_fun ( x ) 5</code> </p><blockquote class="doxtable">
 <p>Result: <code>_fun ( x ) 5</code> </p>
@@ -362,13 +352,13 @@ Function Expressions</h2>
 </blockquote>
 <p></em></p>
 <p><em></em></p>
-<h2><a class="anchor" id="autotoc_md12"></a>
+<h2><a class="anchor" id="autotoc_md13"></a>
 Call Expressions</h2>
 <p><em> MSDLang supports a call construct that is communicated in the following form: </p><blockquote class="doxtable">
 <p><code>function_to_be_called ( actual_argument)</code> </p>
 </blockquote>
 <p></em></p>
-<p><em>Note that the <code>function_to_be_called</code> does indeed need to be a function expression or some expression that reduces to a function expression otherwise a variety of exceptions will be thrown. If the function expression is being both defined and called in a single step then the <code>function_to_be_called</code> must also be parenthesized see first example. However if the function has been defined elsewhere (for example in a let expression) if can be called without parentheses see second example. CallExprs will interpret to numbers, booleans, or functions. Again only FunExprs can be successfully interpreted with free variables.</em></p>
+<p><em>Note that the <code>function_to_be_called</code> does indeed need to be a function expression or some expression that reduces to a function expression otherwise a variety of exceptions will be thrown. CallExprs will interpret to numbers, booleans, or functions. Again only FunExprs can be successfully interpreted with free variables this will result in FunVals.</em></p>
 <p><em></p><blockquote class="doxtable">
 <p>Ex: <code>(_fun (x) x+5) (5)</code> Result: <code>10</code> </p>
 </blockquote>
@@ -380,7 +370,7 @@ Call Expressions</h2>
 </blockquote>
 <p></em></p>
 <p><em></em></p>
-<h2><a class="anchor" id="autotoc_md13"></a>
+<h2><a class="anchor" id="autotoc_md14"></a>
 Recursive Calls</h2>
 <p><em> With the given expression types you can construct recursive Call Expressions. Below is an example of a function that recursively calculates the factorial of 5. Examples requiring much larger amount of recursion are good candidates for running in <code>--step</code> mode which is mentioned in the <a class="el" href="userguide.html">User guide</a>. </p><blockquote class="doxtable">
 <p>Ex: <br  />

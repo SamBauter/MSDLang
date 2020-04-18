@@ -26,7 +26,7 @@
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">MSDScript
-   &#160;<span id="projectnumber">1.0</span>
+   &#160;<span id="projectnumber">1.1</span>
    </div>
    <div id="projectbrief">A simple scripting language for evaluating expressions</div>
   </td>
@@ -85,6 +85,7 @@ $(document).ready(function(){initNavTree('class_val.html',''); initResizable(); 
 <div class="header">
   <div class="summary">
 <a href="#pub-methods">Public Member Functions</a> &#124;
+<a href="#pro-methods">Protected Member Functions</a> &#124;
 <a href="class_val-members.html">List of all members</a>  </div>
   <div class="headertitle">
 <div class="title">Val Class Reference<span class="mlabels"><span class="mlabel">abstract</span></span></div>  </div>
@@ -96,6 +97,8 @@ $(document).ready(function(){initNavTree('class_val.html',''); initResizable(); 
 
 <p><code>#include &lt;<a class="el" href="_value_8hpp_source.html">Value.hpp</a>&gt;</code></p>
 
+<p>Inherits enable_shared_from_this&lt; Val &gt;.</p>
+
 <p>Inherited by <a class="el" href="class_bool_val.html">BoolVal</a>, <a class="el" href="class_fun_val.html">FunVal</a>, and <a class="el" href="class_num_val.html">NumVal</a>.</p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
@@ -103,32 +106,48 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a344cdefd197828eda449a060889f4ab2"><td class="memItemLeft" align="right" valign="top"><a id="a344cdefd197828eda449a060889f4ab2"></a>
 virtual bool&#160;</td><td class="memItemRight" valign="bottom"><b>equals</b> (std::shared_ptr&lt; <a class="el" href="class_val.html">Val</a> &gt; val)=0</td></tr>
 <tr class="separator:a344cdefd197828eda449a060889f4ab2"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a435342d6f74551c6a6628742ae743be2"><td class="memItemLeft" align="right" valign="top"><a id="a435342d6f74551c6a6628742ae743be2"></a>
-virtual std::shared_ptr&lt; <a class="el" href="class_val.html">Val</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>add_to</b> (std::shared_ptr&lt; <a class="el" href="class_val.html">Val</a> &gt; other_val)=0</td></tr>
-<tr class="separator:a435342d6f74551c6a6628742ae743be2"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a02a60f28e6e3fd117f5ccc3f74fe4451"><td class="memItemLeft" align="right" valign="top"><a id="a02a60f28e6e3fd117f5ccc3f74fe4451"></a>
-virtual std::shared_ptr&lt; <a class="el" href="class_val.html">Val</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>mult_with</b> (std::shared_ptr&lt; <a class="el" href="class_val.html">Val</a> &gt; other_val)=0</td></tr>
-<tr class="separator:a02a60f28e6e3fd117f5ccc3f74fe4451"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a00ed22d1960727efde45cdc4f9da1b63"><td class="memItemLeft" align="right" valign="top"><a id="a00ed22d1960727efde45cdc4f9da1b63"></a>
 virtual std::shared_ptr&lt; <a class="el" href="class_expr.html">Expr</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>to_expr</b> ()=0</td></tr>
 <tr class="separator:a00ed22d1960727efde45cdc4f9da1b63"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab1dac5c2a6656bd674eb464dd9d203b1"><td class="memItemLeft" align="right" valign="top"><a id="ab1dac5c2a6656bd674eb464dd9d203b1"></a>
 virtual std::string&#160;</td><td class="memItemRight" valign="bottom"><b>to_string</b> ()=0</td></tr>
 <tr class="separator:ab1dac5c2a6656bd674eb464dd9d203b1"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ad10185dc7531f869c7197ba89479ff95"><td class="memItemLeft" align="right" valign="top"><a id="ad10185dc7531f869c7197ba89479ff95"></a>
-virtual bool&#160;</td><td class="memItemRight" valign="bottom"><b>is_true</b> ()=0</td></tr>
-<tr class="separator:ad10185dc7531f869c7197ba89479ff95"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a2f2c3938a360a3d295a2b27368a6c3bd"><td class="memItemLeft" align="right" valign="top"><a id="a2f2c3938a360a3d295a2b27368a6c3bd"></a>
-virtual std::shared_ptr&lt; <a class="el" href="class_val.html">Val</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>call</b> (std::shared_ptr&lt; <a class="el" href="class_val.html">Val</a> &gt; actual_arg)=0</td></tr>
-<tr class="separator:a2f2c3938a360a3d295a2b27368a6c3bd"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ae82d143a6cc61e7a376607c9fb834957"><td class="memItemLeft" align="right" valign="top"><a id="ae82d143a6cc61e7a376607c9fb834957"></a>
-virtual void&#160;</td><td class="memItemRight" valign="bottom"><b>call_step</b> (std::shared_ptr&lt; <a class="el" href="class_val.html">Val</a> &gt; actual_arg_val, std::shared_ptr&lt; <a class="el" href="class_cont.html">Cont</a> &gt; rest)=0</td></tr>
-<tr class="separator:ae82d143a6cc61e7a376607c9fb834957"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a23a2e51fa8b50720429993a20588f3a7"><td class="memItemLeft" align="right" valign="top"><a id="a23a2e51fa8b50720429993a20588f3a7"></a>
+virtual std::shared_ptr&lt; <a class="el" href="class_val.html">Val</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>add_to</b> (std::shared_ptr&lt; <a class="el" href="class_val.html">Val</a> &gt; other_val)</td></tr>
+<tr class="separator:a23a2e51fa8b50720429993a20588f3a7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a968977f650dd8b25a5b8e8eb3e06207a"><td class="memItemLeft" align="right" valign="top"><a id="a968977f650dd8b25a5b8e8eb3e06207a"></a>
+virtual std::shared_ptr&lt; <a class="el" href="class_val.html">Val</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>sub_with</b> (std::shared_ptr&lt; <a class="el" href="class_val.html">Val</a> &gt; other_val)</td></tr>
+<tr class="separator:a968977f650dd8b25a5b8e8eb3e06207a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a46d0f52150a764b05a1d7c390fe63da2"><td class="memItemLeft" align="right" valign="top"><a id="a46d0f52150a764b05a1d7c390fe63da2"></a>
+virtual std::shared_ptr&lt; <a class="el" href="class_val.html">Val</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>mult_with</b> (std::shared_ptr&lt; <a class="el" href="class_val.html">Val</a> &gt; other_val)</td></tr>
+<tr class="separator:a46d0f52150a764b05a1d7c390fe63da2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a55b42b1a3fe43540f369315841f479bc"><td class="memItemLeft" align="right" valign="top"><a id="a55b42b1a3fe43540f369315841f479bc"></a>
+virtual std::shared_ptr&lt; <a class="el" href="class_val.html">Val</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>div_with</b> (std::shared_ptr&lt; <a class="el" href="class_val.html">Val</a> &gt; other_val)</td></tr>
+<tr class="separator:a55b42b1a3fe43540f369315841f479bc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2311ed71e9342849ad5bdf5ddc1122f9"><td class="memItemLeft" align="right" valign="top"><a id="a2311ed71e9342849ad5bdf5ddc1122f9"></a>
+virtual std::shared_ptr&lt; <a class="el" href="class_val.html">Val</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>mod_with</b> (std::shared_ptr&lt; <a class="el" href="class_val.html">Val</a> &gt; other_val)</td></tr>
+<tr class="separator:a2311ed71e9342849ad5bdf5ddc1122f9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa8b33894941ac5ba4a509cb9d5cc7e93"><td class="memItemLeft" align="right" valign="top"><a id="aa8b33894941ac5ba4a509cb9d5cc7e93"></a>
+virtual bool&#160;</td><td class="memItemRight" valign="bottom"><b>is_true</b> ()</td></tr>
+<tr class="separator:aa8b33894941ac5ba4a509cb9d5cc7e93"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae6f2a77d8977278d19c28eae38a0cc99"><td class="memItemLeft" align="right" valign="top"><a id="ae6f2a77d8977278d19c28eae38a0cc99"></a>
+virtual std::shared_ptr&lt; <a class="el" href="class_val.html">Val</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>call</b> (std::shared_ptr&lt; <a class="el" href="class_val.html">Val</a> &gt; actual_arg)</td></tr>
+<tr class="separator:ae6f2a77d8977278d19c28eae38a0cc99"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a648df1dd545fa2935085c116173fea2d"><td class="memItemLeft" align="right" valign="top"><a id="a648df1dd545fa2935085c116173fea2d"></a>
+virtual void&#160;</td><td class="memItemRight" valign="bottom"><b>call_step</b> (std::shared_ptr&lt; <a class="el" href="class_val.html">Val</a> &gt; actual_arg_val, std::shared_ptr&lt; <a class="el" href="class_cont.html">Cont</a> &gt; rest)</td></tr>
+<tr class="separator:a648df1dd545fa2935085c116173fea2d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-methods"></a>
+Protected Member Functions</h2></td></tr>
+<tr class="memitem:a92b7a823b78bea38b9955da33fbb1546"><td class="memItemLeft" align="right" valign="top"><a id="a92b7a823b78bea38b9955da33fbb1546"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>val_not_a</b> (std::shared_ptr&lt; <a class="el" href="class_val.html">Val</a> &gt; val, std::string what)</td></tr>
+<tr class="separator:a92b7a823b78bea38b9955da33fbb1546"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>An Abstract Class representing all the methods each subclass of <a class="el" href="class_expr.html" title="An Abstract Class representing all the methods each subclass of Expr must implement.">Expr</a> must implement. </p>
-</div><hr/>The documentation for this class was generated from the following file:<ul>
+</div><hr/>The documentation for this class was generated from the following files:<ul>
 <li>MSDLang/<a class="el" href="_value_8hpp_source.html">Value.hpp</a></li>
+<li>MSDLang/Value.cpp</li>
 </ul>
 </div><!-- contents -->
 </div><!-- doc-content -->

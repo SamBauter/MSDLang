@@ -26,7 +26,7 @@
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">MSDScript
-   &#160;<span id="projectnumber">1.0</span>
+   &#160;<span id="projectnumber">1.1</span>
    </div>
    <div id="projectbrief">A simple scripting language for evaluating expressions</div>
   </td>
@@ -90,16 +90,20 @@ $(document).ready(function(){initNavTree('class_bool_val.html',''); initResizabl
 
 <p>This is the complete list of members for <a class="el" href="class_bool_val.html">BoolVal</a>, including all inherited members.</p>
 <table class="directory">
-  <tr bgcolor="#f0f0f0" class="even"><td class="entry"><b>add_to</b>(std::shared_ptr&lt; Val &gt; other_val) override (defined in <a class="el" href="class_bool_val.html">BoolVal</a>)</td><td class="entry"><a class="el" href="class_bool_val.html">BoolVal</a></td><td class="entry"><span class="mlabel">virtual</span></td></tr>
+  <tr bgcolor="#f0f0f0" class="even"><td class="entry"><b>add_to</b>(std::shared_ptr&lt; Val &gt; other_val) (defined in <a class="el" href="class_val.html">Val</a>)</td><td class="entry"><a class="el" href="class_val.html">Val</a></td><td class="entry"><span class="mlabel">virtual</span></td></tr>
   <tr bgcolor="#f0f0f0"><td class="entry"><b>BoolVal</b>(bool rep) (defined in <a class="el" href="class_bool_val.html">BoolVal</a>)</td><td class="entry"><a class="el" href="class_bool_val.html">BoolVal</a></td><td class="entry"></td></tr>
-  <tr bgcolor="#f0f0f0" class="even"><td class="entry"><b>call</b>(std::shared_ptr&lt; Val &gt; actual_arg) override (defined in <a class="el" href="class_bool_val.html">BoolVal</a>)</td><td class="entry"><a class="el" href="class_bool_val.html">BoolVal</a></td><td class="entry"><span class="mlabel">virtual</span></td></tr>
-  <tr bgcolor="#f0f0f0"><td class="entry"><b>call_step</b>(std::shared_ptr&lt; Val &gt; actual_arg_val, std::shared_ptr&lt; Cont &gt; rest) override (defined in <a class="el" href="class_bool_val.html">BoolVal</a>)</td><td class="entry"><a class="el" href="class_bool_val.html">BoolVal</a></td><td class="entry"><span class="mlabel">virtual</span></td></tr>
-  <tr bgcolor="#f0f0f0" class="even"><td class="entry"><b>equals</b>(std::shared_ptr&lt; Val &gt; val) override (defined in <a class="el" href="class_bool_val.html">BoolVal</a>)</td><td class="entry"><a class="el" href="class_bool_val.html">BoolVal</a></td><td class="entry"><span class="mlabel">virtual</span></td></tr>
-  <tr bgcolor="#f0f0f0"><td class="entry"><b>is_true</b>() override (defined in <a class="el" href="class_bool_val.html">BoolVal</a>)</td><td class="entry"><a class="el" href="class_bool_val.html">BoolVal</a></td><td class="entry"><span class="mlabel">virtual</span></td></tr>
-  <tr bgcolor="#f0f0f0" class="even"><td class="entry"><b>mult_with</b>(std::shared_ptr&lt; Val &gt; other_val) override (defined in <a class="el" href="class_bool_val.html">BoolVal</a>)</td><td class="entry"><a class="el" href="class_bool_val.html">BoolVal</a></td><td class="entry"><span class="mlabel">virtual</span></td></tr>
+  <tr bgcolor="#f0f0f0" class="even"><td class="entry"><b>call</b>(std::shared_ptr&lt; Val &gt; actual_arg) (defined in <a class="el" href="class_val.html">Val</a>)</td><td class="entry"><a class="el" href="class_val.html">Val</a></td><td class="entry"><span class="mlabel">virtual</span></td></tr>
+  <tr bgcolor="#f0f0f0"><td class="entry"><b>call_step</b>(std::shared_ptr&lt; Val &gt; actual_arg_val, std::shared_ptr&lt; Cont &gt; rest) (defined in <a class="el" href="class_val.html">Val</a>)</td><td class="entry"><a class="el" href="class_val.html">Val</a></td><td class="entry"><span class="mlabel">virtual</span></td></tr>
+  <tr bgcolor="#f0f0f0" class="even"><td class="entry"><b>div_with</b>(std::shared_ptr&lt; Val &gt; other_val) (defined in <a class="el" href="class_val.html">Val</a>)</td><td class="entry"><a class="el" href="class_val.html">Val</a></td><td class="entry"><span class="mlabel">virtual</span></td></tr>
+  <tr bgcolor="#f0f0f0"><td class="entry"><b>equals</b>(std::shared_ptr&lt; Val &gt; val) override (defined in <a class="el" href="class_bool_val.html">BoolVal</a>)</td><td class="entry"><a class="el" href="class_bool_val.html">BoolVal</a></td><td class="entry"><span class="mlabel">virtual</span></td></tr>
+  <tr bgcolor="#f0f0f0" class="even"><td class="entry"><b>is_true</b>() override (defined in <a class="el" href="class_bool_val.html">BoolVal</a>)</td><td class="entry"><a class="el" href="class_bool_val.html">BoolVal</a></td><td class="entry"><span class="mlabel">virtual</span></td></tr>
+  <tr bgcolor="#f0f0f0"><td class="entry"><b>mod_with</b>(std::shared_ptr&lt; Val &gt; other_val) (defined in <a class="el" href="class_val.html">Val</a>)</td><td class="entry"><a class="el" href="class_val.html">Val</a></td><td class="entry"><span class="mlabel">virtual</span></td></tr>
+  <tr bgcolor="#f0f0f0" class="even"><td class="entry"><b>mult_with</b>(std::shared_ptr&lt; Val &gt; other_val) (defined in <a class="el" href="class_val.html">Val</a>)</td><td class="entry"><a class="el" href="class_val.html">Val</a></td><td class="entry"><span class="mlabel">virtual</span></td></tr>
   <tr bgcolor="#f0f0f0"><td class="entry"><b>rep</b> (defined in <a class="el" href="class_bool_val.html">BoolVal</a>)</td><td class="entry"><a class="el" href="class_bool_val.html">BoolVal</a></td><td class="entry"></td></tr>
-  <tr bgcolor="#f0f0f0" class="even"><td class="entry"><b>to_expr</b>() override (defined in <a class="el" href="class_bool_val.html">BoolVal</a>)</td><td class="entry"><a class="el" href="class_bool_val.html">BoolVal</a></td><td class="entry"><span class="mlabel">virtual</span></td></tr>
-  <tr bgcolor="#f0f0f0"><td class="entry"><b>to_string</b>() override (defined in <a class="el" href="class_bool_val.html">BoolVal</a>)</td><td class="entry"><a class="el" href="class_bool_val.html">BoolVal</a></td><td class="entry"><span class="mlabel">virtual</span></td></tr>
+  <tr bgcolor="#f0f0f0" class="even"><td class="entry"><b>sub_with</b>(std::shared_ptr&lt; Val &gt; other_val) (defined in <a class="el" href="class_val.html">Val</a>)</td><td class="entry"><a class="el" href="class_val.html">Val</a></td><td class="entry"><span class="mlabel">virtual</span></td></tr>
+  <tr bgcolor="#f0f0f0"><td class="entry"><b>to_expr</b>() override (defined in <a class="el" href="class_bool_val.html">BoolVal</a>)</td><td class="entry"><a class="el" href="class_bool_val.html">BoolVal</a></td><td class="entry"><span class="mlabel">virtual</span></td></tr>
+  <tr bgcolor="#f0f0f0" class="even"><td class="entry"><b>to_string</b>() override (defined in <a class="el" href="class_bool_val.html">BoolVal</a>)</td><td class="entry"><a class="el" href="class_bool_val.html">BoolVal</a></td><td class="entry"><span class="mlabel">virtual</span></td></tr>
+  <tr bgcolor="#f0f0f0"><td class="entry"><b>val_not_a</b>(std::shared_ptr&lt; Val &gt; val, std::string what) (defined in <a class="el" href="class_val.html">Val</a>)</td><td class="entry"><a class="el" href="class_val.html">Val</a></td><td class="entry"><span class="mlabel">protected</span></td></tr>
 </table></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->

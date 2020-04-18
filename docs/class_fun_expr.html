@@ -26,7 +26,7 @@
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">MSDScript
-   &#160;<span id="projectnumber">1.0</span>
+   &#160;<span id="projectnumber">1.1</span>
    </div>
    <div id="projectbrief">A simple scripting language for evaluating expressions</div>
   </td>
@@ -92,7 +92,7 @@ $(document).ready(function(){initNavTree('class_fun_expr.html',''); initResizabl
 </div><!--header-->
 <div class="contents">
 
-<p>An <a class="el" href="class_expr.html" title="An Abstract Class representing all the methods each subclass of Expr must implement.">Expr</a> that represents a function declaration.  
+<p>An <a class="el" href="class_expr.html" title="An Abstract Class representing all the methods each subclass of Expr must implement.">Expr</a> that represents a function.  
  <a href="class_fun_expr.html#details">More...</a></p>
 
 <p><code>#include &lt;<a class="el" href="_expr_8h_source.html">Expr.h</a>&gt;</code></p>
@@ -117,10 +117,10 @@ Public Member Functions</h2></td></tr>
 std::shared_ptr&lt; <a class="el" href="class_expr.html">Expr</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_fun_expr.html#a06403774d1e323bcd92d9bed445495d2">subst</a> (std::string var, std::shared_ptr&lt; <a class="el" href="class_val.html">Val</a> &gt; newVal) override</td></tr>
 <tr class="memdesc:a06403774d1e323bcd92d9bed445495d2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Searches an <a class="el" href="class_expr.html" title="An Abstract Class representing all the methods each subclass of Expr must implement.">Expr</a> for an unbound variable: varName, and replaces that variable with new_val. <br /></td></tr>
 <tr class="separator:a06403774d1e323bcd92d9bed445495d2"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aaa361593ee066ddf8931de85a1997369"><td class="memItemLeft" align="right" valign="top"><a id="aaa361593ee066ddf8931de85a1997369"></a>
-std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_fun_expr.html#aaa361593ee066ddf8931de85a1997369">exprToString</a> () override</td></tr>
-<tr class="memdesc:aaa361593ee066ddf8931de85a1997369"><td class="mdescLeft">&#160;</td><td class="mdescRight">Converts an <a class="el" href="class_expr.html" title="An Abstract Class representing all the methods each subclass of Expr must implement.">Expr</a> to its mathematical string representation, may add parentheses to preserve order of operations. <br /></td></tr>
-<tr class="separator:aaa361593ee066ddf8931de85a1997369"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a46c208b4d9181b3b61b67402c9c85a0f"><td class="memItemLeft" align="right" valign="top"><a id="a46c208b4d9181b3b61b67402c9c85a0f"></a>
+std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_fun_expr.html#a46c208b4d9181b3b61b67402c9c85a0f">to_string</a> () override</td></tr>
+<tr class="memdesc:a46c208b4d9181b3b61b67402c9c85a0f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Converts an <a class="el" href="class_expr.html" title="An Abstract Class representing all the methods each subclass of Expr must implement.">Expr</a> to its mathematical string representation, may add parentheses to preserve order of operations. <br /></td></tr>
+<tr class="separator:a46c208b4d9181b3b61b67402c9c85a0f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a9973ba69c39a42a994f31eb026dd3b5c"><td class="memItemLeft" align="right" valign="top"><a id="a9973ba69c39a42a994f31eb026dd3b5c"></a>
 std::shared_ptr&lt; <a class="el" href="class_expr.html">Expr</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_fun_expr.html#a9973ba69c39a42a994f31eb026dd3b5c">optimize</a> () override</td></tr>
 <tr class="memdesc:a9973ba69c39a42a994f31eb026dd3b5c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Simplifies an <a class="el" href="class_expr.html" title="An Abstract Class representing all the methods each subclass of Expr must implement.">Expr</a> if possible. <br /></td></tr>
@@ -134,15 +134,15 @@ bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="clas
 Public Attributes</h2></td></tr>
 <tr class="memitem:a85054499591a461d54c6d6f3f12a9cb6"><td class="memItemLeft" align="right" valign="top"><a id="a85054499591a461d54c6d6f3f12a9cb6"></a>
 std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_fun_expr.html#a85054499591a461d54c6d6f3f12a9cb6">formal_arg</a></td></tr>
-<tr class="memdesc:a85054499591a461d54c6d6f3f12a9cb6"><td class="mdescLeft">&#160;</td><td class="mdescRight">The formal argument or input value of the <a class="el" href="class_fun_expr.html" title="An Expr that represents a function declaration.">FunExpr</a> occuring between the parentheses. Ex: _fun (formal_arg) x+1. <br /></td></tr>
+<tr class="memdesc:a85054499591a461d54c6d6f3f12a9cb6"><td class="mdescLeft">&#160;</td><td class="mdescRight">The formal argument or input value of the <a class="el" href="class_fun_expr.html" title="An Expr that represents a function.">FunExpr</a> occuring between the parentheses. Ex: _fun (formal_arg) x+1. <br /></td></tr>
 <tr class="separator:a85054499591a461d54c6d6f3f12a9cb6"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a555f03540feb1a5a177de31ab3c84931"><td class="memItemLeft" align="right" valign="top"><a id="a555f03540feb1a5a177de31ab3c84931"></a>
 std::shared_ptr&lt; <a class="el" href="class_expr.html">Expr</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_fun_expr.html#a555f03540feb1a5a177de31ab3c84931">body</a></td></tr>
-<tr class="memdesc:a555f03540feb1a5a177de31ab3c84931"><td class="mdescLeft">&#160;</td><td class="mdescRight">The body of the <a class="el" href="class_fun_expr.html" title="An Expr that represents a function declaration.">FunExpr</a> occurring after the parentheses. Ex: _fun (x) body. <br /></td></tr>
+<tr class="memdesc:a555f03540feb1a5a177de31ab3c84931"><td class="mdescLeft">&#160;</td><td class="mdescRight">The body of the <a class="el" href="class_fun_expr.html" title="An Expr that represents a function.">FunExpr</a> occurring after the parentheses. Ex: _fun (x) body. <br /></td></tr>
 <tr class="separator:a555f03540feb1a5a177de31ab3c84931"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><p>An <a class="el" href="class_expr.html" title="An Abstract Class representing all the methods each subclass of Expr must implement.">Expr</a> that represents a function declaration. </p>
+<div class="textblock"><p>An <a class="el" href="class_expr.html" title="An Abstract Class representing all the methods each subclass of Expr must implement.">Expr</a> that represents a function. </p>
 <p>Ex. _fun ( x ) 1+x </p>
 </div><h2 class="groupheader">Member Function Documentation</h2>
 <a id="a135a175cfa2ab56f3f911f20c118d0b9"></a>

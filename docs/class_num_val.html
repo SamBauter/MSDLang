@@ -26,7 +26,7 @@
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">MSDScript
-   &#160;<span id="projectnumber">1.0</span>
+   &#160;<span id="projectnumber">1.1</span>
    </div>
    <div id="projectbrief">A simple scripting language for evaluating expressions</div>
   </td>
@@ -110,30 +110,47 @@ bool&#160;</td><td class="memItemRight" valign="bottom"><b>equals</b> (std::shar
 <tr class="memitem:a3f47bd4c42ff1ccf74c9fea6de8278ab"><td class="memItemLeft" align="right" valign="top"><a id="a3f47bd4c42ff1ccf74c9fea6de8278ab"></a>
 std::shared_ptr&lt; <a class="el" href="class_val.html">Val</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>add_to</b> (std::shared_ptr&lt; <a class="el" href="class_val.html">Val</a> &gt; other_val) override</td></tr>
 <tr class="separator:a3f47bd4c42ff1ccf74c9fea6de8278ab"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab13dcb7220fd03055e481272e8d9843f"><td class="memItemLeft" align="right" valign="top"><a id="ab13dcb7220fd03055e481272e8d9843f"></a>
+std::shared_ptr&lt; <a class="el" href="class_val.html">Val</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>sub_with</b> (std::shared_ptr&lt; <a class="el" href="class_val.html">Val</a> &gt; other_val) override</td></tr>
+<tr class="separator:ab13dcb7220fd03055e481272e8d9843f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a3c33d9371bd5905991f42ba4a5a66186"><td class="memItemLeft" align="right" valign="top"><a id="a3c33d9371bd5905991f42ba4a5a66186"></a>
 std::shared_ptr&lt; <a class="el" href="class_val.html">Val</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>mult_with</b> (std::shared_ptr&lt; <a class="el" href="class_val.html">Val</a> &gt; other_val) override</td></tr>
 <tr class="separator:a3c33d9371bd5905991f42ba4a5a66186"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac82049c5debc56f969745a42f37ea988"><td class="memItemLeft" align="right" valign="top"><a id="ac82049c5debc56f969745a42f37ea988"></a>
+std::shared_ptr&lt; <a class="el" href="class_val.html">Val</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>div_with</b> (std::shared_ptr&lt; <a class="el" href="class_val.html">Val</a> &gt; other_val) override</td></tr>
+<tr class="separator:ac82049c5debc56f969745a42f37ea988"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a52e8061fcce35c3990d435c0ef16f9d9"><td class="memItemLeft" align="right" valign="top"><a id="a52e8061fcce35c3990d435c0ef16f9d9"></a>
+std::shared_ptr&lt; <a class="el" href="class_val.html">Val</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>mod_with</b> (std::shared_ptr&lt; <a class="el" href="class_val.html">Val</a> &gt; other_val) override</td></tr>
+<tr class="separator:a52e8061fcce35c3990d435c0ef16f9d9"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a6559c0f621baae14bd80b1121ca89e47"><td class="memItemLeft" align="right" valign="top"><a id="a6559c0f621baae14bd80b1121ca89e47"></a>
 std::shared_ptr&lt; <a class="el" href="class_expr.html">Expr</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>to_expr</b> () override</td></tr>
 <tr class="separator:a6559c0f621baae14bd80b1121ca89e47"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a3eeeacf62ae0cd3752a6b1cd7aa2b15f"><td class="memItemLeft" align="right" valign="top"><a id="a3eeeacf62ae0cd3752a6b1cd7aa2b15f"></a>
 std::string&#160;</td><td class="memItemRight" valign="bottom"><b>to_string</b> () override</td></tr>
 <tr class="separator:a3eeeacf62ae0cd3752a6b1cd7aa2b15f"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a8b0f735f85b123a4c7eb88e13b36a237"><td class="memItemLeft" align="right" valign="top"><a id="a8b0f735f85b123a4c7eb88e13b36a237"></a>
-bool&#160;</td><td class="memItemRight" valign="bottom"><b>is_true</b> () override</td></tr>
-<tr class="separator:a8b0f735f85b123a4c7eb88e13b36a237"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ac1badfa29a14662340994922d9846520"><td class="memItemLeft" align="right" valign="top"><a id="ac1badfa29a14662340994922d9846520"></a>
-std::shared_ptr&lt; <a class="el" href="class_val.html">Val</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>call</b> (std::shared_ptr&lt; <a class="el" href="class_val.html">Val</a> &gt; actual_arg) override</td></tr>
-<tr class="separator:ac1badfa29a14662340994922d9846520"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a018b17a015c09f476da3f22c121564bb"><td class="memItemLeft" align="right" valign="top"><a id="a018b17a015c09f476da3f22c121564bb"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>call_step</b> (std::shared_ptr&lt; <a class="el" href="class_val.html">Val</a> &gt; actual_arg_val, std::shared_ptr&lt; <a class="el" href="class_cont.html">Cont</a> &gt; rest) override</td></tr>
-<tr class="separator:a018b17a015c09f476da3f22c121564bb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="inherit_header pub_methods_class_val"><td colspan="2" onclick="javascript:toggleInherit('pub_methods_class_val')"><img src="closed.png" alt="-"/>&#160;Public Member Functions inherited from <a class="el" href="class_val.html">Val</a></td></tr>
+<tr class="memitem:aa8b33894941ac5ba4a509cb9d5cc7e93 inherit pub_methods_class_val"><td class="memItemLeft" align="right" valign="top"><a id="aa8b33894941ac5ba4a509cb9d5cc7e93"></a>
+virtual bool&#160;</td><td class="memItemRight" valign="bottom"><b>is_true</b> ()</td></tr>
+<tr class="separator:aa8b33894941ac5ba4a509cb9d5cc7e93 inherit pub_methods_class_val"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae6f2a77d8977278d19c28eae38a0cc99 inherit pub_methods_class_val"><td class="memItemLeft" align="right" valign="top"><a id="ae6f2a77d8977278d19c28eae38a0cc99"></a>
+virtual std::shared_ptr&lt; <a class="el" href="class_val.html">Val</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>call</b> (std::shared_ptr&lt; <a class="el" href="class_val.html">Val</a> &gt; actual_arg)</td></tr>
+<tr class="separator:ae6f2a77d8977278d19c28eae38a0cc99 inherit pub_methods_class_val"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a648df1dd545fa2935085c116173fea2d inherit pub_methods_class_val"><td class="memItemLeft" align="right" valign="top"><a id="a648df1dd545fa2935085c116173fea2d"></a>
+virtual void&#160;</td><td class="memItemRight" valign="bottom"><b>call_step</b> (std::shared_ptr&lt; <a class="el" href="class_val.html">Val</a> &gt; actual_arg_val, std::shared_ptr&lt; <a class="el" href="class_cont.html">Cont</a> &gt; rest)</td></tr>
+<tr class="separator:a648df1dd545fa2935085c116173fea2d inherit pub_methods_class_val"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-attribs"></a>
 Public Attributes</h2></td></tr>
 <tr class="memitem:a188a97b38ad11d576d89e75226ed1dab"><td class="memItemLeft" align="right" valign="top"><a id="a188a97b38ad11d576d89e75226ed1dab"></a>
 int&#160;</td><td class="memItemRight" valign="bottom"><b>rep</b></td></tr>
 <tr class="separator:a188a97b38ad11d576d89e75226ed1dab"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="inherited"></a>
+Additional Inherited Members</h2></td></tr>
+<tr class="inherit_header pro_methods_class_val"><td colspan="2" onclick="javascript:toggleInherit('pro_methods_class_val')"><img src="closed.png" alt="-"/>&#160;Protected Member Functions inherited from <a class="el" href="class_val.html">Val</a></td></tr>
+<tr class="memitem:a92b7a823b78bea38b9955da33fbb1546 inherit pro_methods_class_val"><td class="memItemLeft" align="right" valign="top"><a id="a92b7a823b78bea38b9955da33fbb1546"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>val_not_a</b> (std::shared_ptr&lt; <a class="el" href="class_val.html">Val</a> &gt; val, std::string what)</td></tr>
+<tr class="separator:a92b7a823b78bea38b9955da33fbb1546 inherit pro_methods_class_val"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>A <a class="el" href="class_val.html" title="An Abstract Class representing all the methods each subclass of Expr must implement.">Val</a> that represents a single number. </p>

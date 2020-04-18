@@ -26,7 +26,7 @@
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">MSDScript
-   &#160;<span id="projectnumber">1.0</span>
+   &#160;<span id="projectnumber">1.1</span>
    </div>
    <div id="projectbrief">A simple scripting language for evaluating expressions</div>
   </td>
@@ -87,7 +87,7 @@ $(document).ready(function(){initNavTree('userguide.html',''); initResizable(); 
 <div class="title">User guide </div>  </div>
 </div><!--header-->
 <div class="contents">
-<div class="textblock"><h1><a class="anchor" id="autotoc_md14"></a>
+<div class="textblock"><h1><a class="anchor" id="autotoc_md16"></a>
 Running From the Command Line</h1>
 <p>SUMMARY:</p>
 <p>&gt;<code>./MSDLangExec [--modeOfOperation] [fileContainingExpression]</code></p>
@@ -104,7 +104,7 @@ Running From the Command Line</h1>
 <p>Result: <code>21</code> </p>
 </blockquote>
 </blockquote>
-<h1><a class="anchor" id="autotoc_md15"></a>
+<h1><a class="anchor" id="autotoc_md17"></a>
 Interpreting an Expression From a Text File</h1>
 <p>When running the program a file can be provided as the first argument. Without any other arguments provided the MDSScript will read and interpret the expression contained in the file.</p>
 <blockquote class="doxtable">
@@ -115,13 +115,13 @@ Interpreting an Expression From a Text File</h1>
 <p>&gt;Result: <code>120</code> </p>
 </blockquote>
 </blockquote>
-<h1><a class="anchor" id="autotoc_md16"></a>
+<h1><a class="anchor" id="autotoc_md18"></a>
 Optimizing an Expression</h1>
 <p>The "--opt" flag can be provided as the first argument of the command. This flag signals to the program will operating in optimize mode and attempt to simplify the passed expression(expressions can be passed in the command line or through files as before). For more information on the specific type of simplification that is performed on the program please refer to the Optimize section of the API documentation.</p>
 <blockquote class="doxtable">
 <p><code>./MSDLangExec --opt [fileContainingExpression]</code> </p>
 </blockquote>
-<h1><a class="anchor" id="autotoc_md17"></a>
+<h1><a class="anchor" id="autotoc_md19"></a>
 Interpreting Expression with a large amount of recursion</h1>
 <p>The "--step" flag is a flag that changes the way memory is allocated during the evaluation of an expression. Use this flag if the default mode of interpretation segmentation faulted. An example of the type of expression that step is designed for can be seen below.</p>
 <blockquote class="doxtable">
@@ -133,6 +133,13 @@ Interpreting Expression with a large amount of recursion</h1>
 <p><code>_else 1 + count(count)(n + -1)</code></p>
 <p><code>_in count(count)(100000)</code> Ex: <code>./MSDLangExec --opt ./count.msd</code> </p><blockquote class="doxtable">
 <p><code>Result: 100000</code> </p>
+</blockquote>
+</blockquote>
+<h1><a class="anchor" id="autotoc_md20"></a>
+Running Tests</h1>
+<p>The MSDLang Package contains more than 100 catch2 tests in a file <code>Tests.cpp</code> which is included in main. For those interest in using this language as a starting point and adapting it further tests can easily be added to that file. In order to run the tests the flag "--test" can be passed as the first argument in the command line. </p><blockquote class="doxtable">
+<p>Ex: <code>./MSDLangExec --test</code> </p><blockquote class="doxtable">
+<p><code>Result: All tests passed (162 assertions in 67 test cases)</code> </p>
 </blockquote>
 </blockquote>
 </div></div><!-- contents -->

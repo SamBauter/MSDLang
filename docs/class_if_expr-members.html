@@ -26,7 +26,7 @@
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">MSDScript
-   &#160;<span id="projectnumber">1.0</span>
+   &#160;<span id="projectnumber">1.1</span>
    </div>
    <div id="projectbrief">A simple scripting language for evaluating expressions</div>
   </td>
@@ -93,13 +93,13 @@ $(document).ready(function(){initNavTree('class_if_expr.html',''); initResizable
   <tr class="even"><td class="entry"><a class="el" href="class_if_expr.html#a82dff58471d24eaaf55daf7db9485a20">condition</a></td><td class="entry"><a class="el" href="class_if_expr.html">IfExpr</a></td><td class="entry"></td></tr>
   <tr><td class="entry"><a class="el" href="class_if_expr.html#ae1d5068dcbaad4219a958a37f30c415a">containsVar</a>() override</td><td class="entry"><a class="el" href="class_if_expr.html">IfExpr</a></td><td class="entry"><span class="mlabel">virtual</span></td></tr>
   <tr class="even"><td class="entry"><a class="el" href="class_if_expr.html#a1ca0b6929d2344e1a803b7570e76890d">equals</a>(std::shared_ptr&lt; Expr &gt; e) override</td><td class="entry"><a class="el" href="class_if_expr.html">IfExpr</a></td><td class="entry"><span class="mlabel">virtual</span></td></tr>
-  <tr><td class="entry"><a class="el" href="class_if_expr.html#a9f2e45f694da22488e93fddf6b2b472a">exprToString</a>() override</td><td class="entry"><a class="el" href="class_if_expr.html">IfExpr</a></td><td class="entry"><span class="mlabel">virtual</span></td></tr>
-  <tr class="even"><td class="entry"><a class="el" href="class_if_expr.html#a89c1df88f1ea85d11b2c607c41bc79d3">falseConseq</a></td><td class="entry"><a class="el" href="class_if_expr.html">IfExpr</a></td><td class="entry"></td></tr>
-  <tr bgcolor="#f0f0f0"><td class="entry"><b>IfExpr</b>(std::shared_ptr&lt; Expr &gt; condition, std::shared_ptr&lt; Expr &gt; trueConseq, std::shared_ptr&lt; Expr &gt; falseConseq) (defined in <a class="el" href="class_if_expr.html">IfExpr</a>)</td><td class="entry"><a class="el" href="class_if_expr.html">IfExpr</a></td><td class="entry"></td></tr>
-  <tr class="even"><td class="entry"><a class="el" href="class_if_expr.html#adeace752d5ed220976f769e9c89f53cc">interp</a>(std::shared_ptr&lt; Env &gt; env) override</td><td class="entry"><a class="el" href="class_if_expr.html">IfExpr</a></td><td class="entry"><span class="mlabel">virtual</span></td></tr>
-  <tr><td class="entry"><a class="el" href="class_if_expr.html#aaa5fe1d848b52dd9459132c2a08db83a">optimize</a>() override</td><td class="entry"><a class="el" href="class_if_expr.html">IfExpr</a></td><td class="entry"><span class="mlabel">virtual</span></td></tr>
-  <tr class="even"><td class="entry"><a class="el" href="class_if_expr.html#a58744e96f126876a9d64311eccf01fde">step_interp</a>() override</td><td class="entry"><a class="el" href="class_if_expr.html">IfExpr</a></td><td class="entry"><span class="mlabel">virtual</span></td></tr>
-  <tr><td class="entry"><a class="el" href="class_if_expr.html#a86cc6e10457486346b503bbe1962a098">subst</a>(std::string var, std::shared_ptr&lt; Val &gt; newVal) override</td><td class="entry"><a class="el" href="class_if_expr.html">IfExpr</a></td><td class="entry"><span class="mlabel">virtual</span></td></tr>
+  <tr><td class="entry"><a class="el" href="class_if_expr.html#a89c1df88f1ea85d11b2c607c41bc79d3">falseConseq</a></td><td class="entry"><a class="el" href="class_if_expr.html">IfExpr</a></td><td class="entry"></td></tr>
+  <tr bgcolor="#f0f0f0" class="even"><td class="entry"><b>IfExpr</b>(std::shared_ptr&lt; Expr &gt; condition, std::shared_ptr&lt; Expr &gt; trueConseq, std::shared_ptr&lt; Expr &gt; falseConseq) (defined in <a class="el" href="class_if_expr.html">IfExpr</a>)</td><td class="entry"><a class="el" href="class_if_expr.html">IfExpr</a></td><td class="entry"></td></tr>
+  <tr><td class="entry"><a class="el" href="class_if_expr.html#adeace752d5ed220976f769e9c89f53cc">interp</a>(std::shared_ptr&lt; Env &gt; env) override</td><td class="entry"><a class="el" href="class_if_expr.html">IfExpr</a></td><td class="entry"><span class="mlabel">virtual</span></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="class_if_expr.html#aaa5fe1d848b52dd9459132c2a08db83a">optimize</a>() override</td><td class="entry"><a class="el" href="class_if_expr.html">IfExpr</a></td><td class="entry"><span class="mlabel">virtual</span></td></tr>
+  <tr><td class="entry"><a class="el" href="class_if_expr.html#a58744e96f126876a9d64311eccf01fde">step_interp</a>() override</td><td class="entry"><a class="el" href="class_if_expr.html">IfExpr</a></td><td class="entry"><span class="mlabel">virtual</span></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="class_if_expr.html#a86cc6e10457486346b503bbe1962a098">subst</a>(std::string var, std::shared_ptr&lt; Val &gt; newVal) override</td><td class="entry"><a class="el" href="class_if_expr.html">IfExpr</a></td><td class="entry"><span class="mlabel">virtual</span></td></tr>
+  <tr><td class="entry"><a class="el" href="class_if_expr.html#a906a83d4b478fecb10f610f6f4f888b0">to_string</a>() override</td><td class="entry"><a class="el" href="class_if_expr.html">IfExpr</a></td><td class="entry"><span class="mlabel">virtual</span></td></tr>
   <tr class="even"><td class="entry"><a class="el" href="class_if_expr.html#a80c1c8bd9bcef319a1a96c4f38bf0e6f">trueConseq</a></td><td class="entry"><a class="el" href="class_if_expr.html">IfExpr</a></td><td class="entry"></td></tr>
 </table></div><!-- contents -->
 </div><!-- doc-content -->

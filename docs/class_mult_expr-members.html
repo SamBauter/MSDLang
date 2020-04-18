@@ -26,7 +26,7 @@
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">MSDScript
-   &#160;<span id="projectnumber">1.0</span>
+   &#160;<span id="projectnumber">1.1</span>
    </div>
    <div id="projectbrief">A simple scripting language for evaluating expressions</div>
   </td>
@@ -90,16 +90,18 @@ $(document).ready(function(){initNavTree('class_mult_expr.html',''); initResizab
 
 <p>This is the complete list of members for <a class="el" href="class_mult_expr.html">MultExpr</a>, including all inherited members.</p>
 <table class="directory">
-  <tr class="even"><td class="entry"><a class="el" href="class_mult_expr.html#a01f0c28825079389393bb217cc0ad2e0">containsVar</a>() override</td><td class="entry"><a class="el" href="class_mult_expr.html">MultExpr</a></td><td class="entry"><span class="mlabel">virtual</span></td></tr>
-  <tr><td class="entry"><a class="el" href="class_mult_expr.html#ab738d65bbc4fa2fa0eb1642e2631dba6">equals</a>(std::shared_ptr&lt; Expr &gt; e) override</td><td class="entry"><a class="el" href="class_mult_expr.html">MultExpr</a></td><td class="entry"><span class="mlabel">virtual</span></td></tr>
-  <tr class="even"><td class="entry"><a class="el" href="class_mult_expr.html#ad6f38907549bc730f2000b14e04254a8">exprToString</a>() override</td><td class="entry"><a class="el" href="class_mult_expr.html">MultExpr</a></td><td class="entry"><span class="mlabel">virtual</span></td></tr>
-  <tr><td class="entry"><a class="el" href="class_mult_expr.html#aa0c7bf289fe220037777888ec027c41f">interp</a>(std::shared_ptr&lt; Env &gt; env) override</td><td class="entry"><a class="el" href="class_mult_expr.html">MultExpr</a></td><td class="entry"><span class="mlabel">virtual</span></td></tr>
-  <tr class="even"><td class="entry"><a class="el" href="class_mult_expr.html#a1ac8b01114f0fe98deee97b5ca15fdde">lhs</a></td><td class="entry"><a class="el" href="class_mult_expr.html">MultExpr</a></td><td class="entry"></td></tr>
+  <tr bgcolor="#f0f0f0" class="even"><td class="entry"><b>BinaryOpExpr</b>(std::shared_ptr&lt; BinaryOp &gt; op, std::shared_ptr&lt; Expr &gt; lhs, std::shared_ptr&lt; Expr &gt; rhs) (defined in <a class="el" href="class_binary_op_expr.html">BinaryOpExpr</a>)</td><td class="entry"><a class="el" href="class_binary_op_expr.html">BinaryOpExpr</a></td><td class="entry"></td></tr>
+  <tr><td class="entry"><a class="el" href="class_binary_op_expr.html#a1c7edfab3a51b00f6b9e432d7a066583">containsVar</a>() override</td><td class="entry"><a class="el" href="class_binary_op_expr.html">BinaryOpExpr</a></td><td class="entry"><span class="mlabel">virtual</span></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="class_binary_op_expr.html#ad31dcb67b0cd439d8a6f6f19812ef976">equals</a>(std::shared_ptr&lt; Expr &gt; other_expr) override</td><td class="entry"><a class="el" href="class_binary_op_expr.html">BinaryOpExpr</a></td><td class="entry"><span class="mlabel">virtual</span></td></tr>
+  <tr><td class="entry"><a class="el" href="class_binary_op_expr.html#a6460c09cadbf680239b1e9ce96f54eda">interp</a>(std::shared_ptr&lt; Env &gt; env) override</td><td class="entry"><a class="el" href="class_binary_op_expr.html">BinaryOpExpr</a></td><td class="entry"><span class="mlabel">virtual</span></td></tr>
+  <tr bgcolor="#f0f0f0" class="even"><td class="entry"><b>lhs</b> (defined in <a class="el" href="class_binary_op_expr.html">BinaryOpExpr</a>)</td><td class="entry"><a class="el" href="class_binary_op_expr.html">BinaryOpExpr</a></td><td class="entry"></td></tr>
   <tr bgcolor="#f0f0f0"><td class="entry"><b>MultExpr</b>(std::shared_ptr&lt; Expr &gt; lhs, std::shared_ptr&lt; Expr &gt; rhs) (defined in <a class="el" href="class_mult_expr.html">MultExpr</a>)</td><td class="entry"><a class="el" href="class_mult_expr.html">MultExpr</a></td><td class="entry"></td></tr>
-  <tr class="even"><td class="entry"><a class="el" href="class_mult_expr.html#a196701c86037221f6761a39d5e9068f3">optimize</a>() override</td><td class="entry"><a class="el" href="class_mult_expr.html">MultExpr</a></td><td class="entry"><span class="mlabel">virtual</span></td></tr>
-  <tr><td class="entry"><a class="el" href="class_mult_expr.html#a21bc7844f9aa42cd035b031f89d7b250">rhs</a></td><td class="entry"><a class="el" href="class_mult_expr.html">MultExpr</a></td><td class="entry"></td></tr>
-  <tr class="even"><td class="entry"><a class="el" href="class_mult_expr.html#aeacf08227deef7c7e7321ece2636c0e5">step_interp</a>() override</td><td class="entry"><a class="el" href="class_mult_expr.html">MultExpr</a></td><td class="entry"><span class="mlabel">virtual</span></td></tr>
-  <tr><td class="entry"><a class="el" href="class_mult_expr.html#aa0e996d392dcd0c57853e536944456c9">subst</a>(std::string varName, std::shared_ptr&lt; Val &gt; new_val) override</td><td class="entry"><a class="el" href="class_mult_expr.html">MultExpr</a></td><td class="entry"><span class="mlabel">virtual</span></td></tr>
+  <tr bgcolor="#f0f0f0" class="even"><td class="entry"><b>op</b> (defined in <a class="el" href="class_binary_op_expr.html">BinaryOpExpr</a>)</td><td class="entry"><a class="el" href="class_binary_op_expr.html">BinaryOpExpr</a></td><td class="entry"></td></tr>
+  <tr><td class="entry"><a class="el" href="class_binary_op_expr.html#a32d024ea70cf96f4bbddce7f6239af11">optimize</a>() override</td><td class="entry"><a class="el" href="class_binary_op_expr.html">BinaryOpExpr</a></td><td class="entry"><span class="mlabel">virtual</span></td></tr>
+  <tr bgcolor="#f0f0f0" class="even"><td class="entry"><b>rhs</b> (defined in <a class="el" href="class_binary_op_expr.html">BinaryOpExpr</a>)</td><td class="entry"><a class="el" href="class_binary_op_expr.html">BinaryOpExpr</a></td><td class="entry"></td></tr>
+  <tr><td class="entry"><a class="el" href="class_binary_op_expr.html#a7a363b96b29dac504da2ef8146c27830">step_interp</a>() override</td><td class="entry"><a class="el" href="class_binary_op_expr.html">BinaryOpExpr</a></td><td class="entry"><span class="mlabel">virtual</span></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="class_binary_op_expr.html#aea43e4ce913cb12f912ae5ac0b7e239b">subst</a>(std::string varName, std::shared_ptr&lt; Val &gt; new_val) override</td><td class="entry"><a class="el" href="class_binary_op_expr.html">BinaryOpExpr</a></td><td class="entry"><span class="mlabel">virtual</span></td></tr>
+  <tr><td class="entry"><a class="el" href="class_binary_op_expr.html#a60d0b97887e76097c06c1044c33c0ab9">to_string</a>() override</td><td class="entry"><a class="el" href="class_binary_op_expr.html">BinaryOpExpr</a></td><td class="entry"><span class="mlabel">virtual</span></td></tr>
 </table></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->
